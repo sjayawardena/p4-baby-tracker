@@ -29,7 +29,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     '8000-sjayawarden-p4babytrack-0ftoea32ilp.ws-eu110.gitpod.io',
-    ,'.herokuapp.com',
+    '.herokuapp.com',
 ]
 
 
