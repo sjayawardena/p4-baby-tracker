@@ -1,3 +1,70 @@
 
 
-/* Navbar */
+/* Root variables - fonts*/ 
+:root { 
+/* ++ADD FONT FAMILIES ROOT VARIABLES PER VIDEOS++ */  
+
+/* Root variables - colors 
+++ADD COLORS ROOT VARIABLES PER VIDEOS++ */
+
+/* Root variables - utils
+++ ADD UTILITY ROOT VARIABLES PER VIDEOS++ */
+--small-box-shadow: 1px -1px 7px 0 #00000061;
+border: 1px solid #00000030;
+}
+
+/* General */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* ++ADD FONT FAMILY++ */ 
+}
+
+main {
+    flex: 1 0 auto;
+    /* ++ADD BACKGROUND-COLOR++ */
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+    /* ++ADD FONT FAMILY++ */
+}
+
+/* Header/Navbar */
+.nav-item {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.navbar {
+    /* ++ADD BACKGROUND COLOR ROOT VARIABLE++ */
+    box-shadow: var(--small-box-shadow);
+}
+
+a.nav-link {
+    /* ++ADD ROOT VARIABLE COLOR++ */
+}
+
+/* ++ADD img.logo STYLING++ */
+
+/* Footer */
+footer {
+    flex-shrink: 0;
+    /* ++ADD FONT FAMILY++ */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon {
+    font-size: 150%;
+    margin: 3.5vw;
+    /* ADD COLOR FROM ROOT VARIABLES */
+}
