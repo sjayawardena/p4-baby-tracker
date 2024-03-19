@@ -53,6 +53,20 @@ a.nav-link {
 
 /* ++ADD img.logo STYLING++ */
 
+.active {
+    border-bottom: 2px solid blue; /* ++ADD ROOT VARIABLE COLOR WHEN DECIDED++ */
+    font-weight: 500;
+}
+
+/* Forms (e.g. sign up etc) */
+
+.form {
+    width: 100%;
+    margin: 3% auto;
+    box-shadow: var(--small-box-shadow);
+    border-radius: 5px;
+}
+
 /* Footer */
 footer {
     flex-shrink: 0;
