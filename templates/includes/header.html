@@ -19,7 +19,7 @@
                 <a class="nav-link" href="#">Feeds</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Nappy Changes</a>
+                <a class="nav-link {% if url_name == 'add_nappy_change' %}active{% endif %}" href="{% url 'add_nappy_change' %}">Nappy Changes</a>
               </li>
               {% if request.user.is_authenticated %}
               <li class="nav-item">
