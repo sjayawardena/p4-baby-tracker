@@ -2,18 +2,16 @@ from django.views.generic import CreateView, ListView
 
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-from .models import NappyChange
+from .models import NappyChange, User
 
 from .forms import NappyChangeForm
 
-
-
-class NappyChangesList(ListView):
+class NappyChangesList(LoginRequiredMixin, ListView):
     """View list of recent nappy changes"""
     template_name = 'nappy_changes/nappy_changes_list.html'
     model = NappyChange
     context_object_name = 'nappy_changes_list'
-
+    
 
 class AddNappyChange(LoginRequiredMixin, CreateView):
     """
