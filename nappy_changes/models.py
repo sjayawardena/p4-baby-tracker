@@ -8,15 +8,15 @@ class NappyChange(models.Model):
     A model to enter and edit nappy changes
     """
     NAPPY_CONTENTS = (
-        ('wet', 'Wet'),
-        ('dirty', 'Dirty'),
-        ('nothing', 'Nothing')
+        ('Wet', 'Wet'),
+        ('Dirty', 'Dirty'),
+        ('Nothing', 'Nothing')
     )
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='baby_carer')
     date_and_time = models.DateTimeField()
     nappy_contents = models.CharField(max_length=10, choices=NAPPY_CONTENTS, null=False, blank=False)
     rash = models.BooleanField(default=False)
-    notes = models.CharField(max_length=500)
+    notes = models.CharField(max_length=100)
     
     class Meta:
         ordering = ['-date_and_time']

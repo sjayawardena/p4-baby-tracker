@@ -75,6 +75,11 @@ a.nav-link {
     display: none;
 }
 
+/* Nappy changes list */
+.card {
+    margin: 1rem;
+}
+
 /* Footer */
 footer {
     flex-shrink: 0;

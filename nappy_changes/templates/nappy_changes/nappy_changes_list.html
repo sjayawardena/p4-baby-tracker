@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+
+{% block title %}Nappy Changes{% endblock %}
+
+{% block content %}
+<h1 class="text-center p-2 d-block">
+    Recent Nappy Changes
+</h1>
+<div class="container d-flex flex-row flex-wrap justify-content-center">
+    {% for nappy_change in nappy_changes_list %}
+    <div class="card nappy_changes_list_card" aria-label ="{{nappy_change.nappy_contents}} nappy from {{nappy_change.date_and_time}}" style="width: 18rem;">
+    <div class="card-body ">
+          <h2 class="card-title">{{nappy_change.nappy_contents|title}} nappy</h2> 
+          <h3>{{nappy_change.date_and_time}}</h3>
+          <p class="card-text">Rash? {{nappy_change.rash}}</p>
+          <p class="card-text">Notes: {{nappy_change.notes}}</p>
+        </div>
+      </div>
+    {% endfor %}
+</div>
+{% endblock %}
