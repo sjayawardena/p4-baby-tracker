@@ -12,6 +12,10 @@ class NappyChangesList(LoginRequiredMixin, ListView):
     model = NappyChange
     context_object_name = 'nappy_changes_list'
     
+    def get_queryset(self):
+        return self.request.user.nappy_changes_list.all()
+    
+
 
 class AddNappyChange(LoginRequiredMixin, CreateView):
     """

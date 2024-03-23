@@ -8,11 +8,11 @@ class NappyChange(models.Model):
     A model to enter and edit nappy changes
     """
     NAPPY_CONTENTS = (
-        ('Wet', 'Wet'),
-        ('Dirty', 'Dirty'),
-        ('Nothing', 'Nothing')
+        ('wet', 'Wet'),
+        ('dirty', 'Dirty'),
+        ('nothing', 'Nothing')
     )
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='baby_carer')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='nappy_changes_list')
     date_and_time = models.DateTimeField()
     nappy_contents = models.CharField(max_length=10, choices=NAPPY_CONTENTS, null=False, blank=False)
     rash = models.BooleanField(default=False)
@@ -23,4 +23,5 @@ class NappyChange(models.Model):
     
     def __str__(self):
         return f"{self.nappy_contents} nappy from {self.date_and_time} | entered by {self.user}"
+    
 
