@@ -15,6 +15,11 @@
           <h3>{{nappy_change.date_and_time}}</h3>
           <p class="card-text">Rash? {{nappy_change.rash}}</p>
           <p class="card-text">Notes: {{nappy_change.notes}}</p>
+          {% if request.user == nappy_change.user %}
+          <div class="text-center">
+            <a href="{% url 'delete_nappy_change' nappy_change.id %}" class="btn btn-primary w-25">Delete</a>
+          </div>
+          {% endif %}
         </div>
       </div>
     {% endfor %}
