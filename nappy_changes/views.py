@@ -2,6 +2,8 @@ from django.views.generic import CreateView, DetailView, DeleteView, ListView
 
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
+from django.urls import reverse_lazy
+
 from .models import NappyChange, User
 
 from .forms import NappyChangeForm
@@ -24,7 +26,7 @@ class AddNappyChange(LoginRequiredMixin, CreateView):
     template_name = 'nappy_changes/add_nappy_change.html'
     model = NappyChange
     form_class = NappyChangeForm
-    success_url = 'nappy_changes_list/'
+    success_url = reverse_lazy('nappy_changes_list')
     
     def form_valid(self, form):
         form.instance.user = self.request.user
@@ -35,7 +37,7 @@ class DeleteNappyChange(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """Delete a nappy change entry - with check that logged in user is deleting only their own entries"""
     model = NappyChange
     template_name = 'nappy_changes/nappy_change_confirm_delete.html'
-    success_url = 'nappy_changes/templates/nappy_changes/nappy_changes_list.html'
+    success_url = reverse_lazy('nappy_changes_list')
     
     def test_func(self):
         return self.request.user == self.get_object().user

@@ -16,7 +16,7 @@ class NappyChange(models.Model):
     date_and_time = models.DateTimeField()
     nappy_contents = models.CharField(max_length=10, choices=NAPPY_CONTENTS, null=False, blank=False)
     rash = models.BooleanField(default=False)
-    notes = models.CharField(max_length=100)
+    notes = models.CharField(max_length=100, blank=True)
     
     class Meta:
         ordering = ['-date_and_time']
