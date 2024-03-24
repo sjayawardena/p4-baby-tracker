@@ -1,4 +1,4 @@
-from django.views.generic import CreateView, DetailView, DeleteView, ListView
+from django.views.generic import CreateView, DetailView, DeleteView, UpdateView, ListView
 
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
@@ -18,7 +18,6 @@ class NappyChangesList(LoginRequiredMixin, ListView):
         return self.request.user.nappy_changes_list.all()
     
 
-
 class AddNappyChange(LoginRequiredMixin, CreateView):
     """
     Add nappy change view
@@ -31,6 +30,17 @@ class AddNappyChange(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super(AddNappyChange, self).form_valid(form)
+
+
+class EditNappyChange(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    """Edit a nappy change entry - with check that logged in user is editing only their own entries"""
+    template_name = 'nappy_changes/edit_nappy_change.html'
+    model = NappyChange
+    form_class = NappyChangeForm
+    success_url = reverse_lazy('nappy_changes_list')
+    
+    def test_func(self):
+        return self.request.user == self.get_object().user
     
 
 class DeleteNappyChange(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
