@@ -38,8 +38,8 @@ class Feed(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='feeds_list')
     date_and_time = models.DateTimeField()
     feed_type = models.CharField(max_length=10, choices=FEED_TYPE, null=False, blank=False)
-    formula_amount_ml = models.IntegerField()
-    breast_feed_time_minutes = models.IntegerField()
+    formula_amount_ml = models.IntegerField(blank=True)
+    breast_feed_time_minutes = models.IntegerField(blank=True)
     notes = models.CharField(max_length=200, blank=True)
     
     class Meta:
