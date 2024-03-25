@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %} Add Feed {% endblock %}
+
+{%block content %}
+<div class="container">
+    <form method="POST" class="p-2 form">
+        <h1 class="text-center">Add Feed</h1>
+        {% csrf_token %}
+        {{ form|crispy }}
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary mt-2">Enter Feed</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

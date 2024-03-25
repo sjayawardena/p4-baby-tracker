@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     # Apps
     'nappy_changes',
     'home',
+    'feeds',
     
     # Other
     'crispy_forms',
