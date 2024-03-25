@@ -16,10 +16,10 @@
                 <a class="nav-link {% if url_name == 'home' %}active{% endif %}" aria-current="page" href="{% url 'home' %}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Add Feed</a>
+                <a class="nav-link {% if url_name == 'add_feed' %}active{% endif %}" href="{% url 'add_feed' %}">Add Feed</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">View/Edit Feeds</a>
+                <a class="nav-link {% if url_name == 'feeds_list' %}active{% endif %}" href="{% url 'feeds_list' %}">View/Edit Feeds</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link {% if url_name == 'add_nappy_change' %}active{% endif %}" href="{% url 'add_nappy_change' %}">Add Nappy Change</a>
