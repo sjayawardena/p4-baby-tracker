@@ -9,9 +9,5 @@ class FeedAdmin(admin.ModelAdmin):
     'user',
     'date_and_time',
     'feed_type',
-    'formula_amount_ml',
-    'breast_feed_time_minutes',
-    'notes'
     )
-    list_filter = ('user', 'date_and_time', 'feed_type', 'formula_amount_ml',
-                   'breast_feed_time_minutes', 'notes')
+    list_filter = ('user', 'date_and_time', 'feed_type')

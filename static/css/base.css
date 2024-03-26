@@ -58,6 +58,12 @@ a.nav-link {
     font-weight: 500;
 }
 
+/* Home Page */
+
+.home-page-text {
+    list-style-type: none;
+}
+
 /* Forms (e.g. sign up etc) */
 
 .form {
