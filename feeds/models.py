@@ -1,6 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+from django_resized import ResizedImageField
+
 # Create your models here.
 
 class Feed(models.Model):
@@ -19,6 +21,16 @@ class Feed(models.Model):
     formula_amount_ml = models.IntegerField(null=True, blank=True)
     breast_feed_time_minutes = models.IntegerField(null=True,blank=True)
     notes = models.CharField(max_length=200, blank=True)
+    image = ResizedImageField(
+        size=[400, None],
+        quality=75,
+        upload_to="feeds/",
+        force_format="WEBP",
+        blank=False,
+        null=False,
+        default = "static/images/baby-tracker-default-image.jpg",
+    )
+    image_alt = models.CharField(max_length=100, null=False, blank=False, default="Tracker.Baby default image")
     
     class Meta:
         ordering = ['-date_and_time']
