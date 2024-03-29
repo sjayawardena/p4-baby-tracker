@@ -9,18 +9,22 @@ class Migration(migrations.Migration):
 
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('nappy_changes', '0001_initial'),
+        ("nappy_changes", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='nappychange',
-            name='notes',
+            model_name="nappychange",
+            name="notes",
             field=models.CharField(max_length=100),
         ),
         migrations.AlterField(
-            model_name='nappychange',
-            name='user',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='user_nappies', to=settings.AUTH_USER_MODEL),
+            model_name="nappychange",
+            name="user",
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="user_nappies",
+                to=settings.AUTH_USER_MODEL,
+            ),
         ),
     ]

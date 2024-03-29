@@ -81,9 +81,33 @@ a.nav-link {
     display: none;
 }
 
-/* Nappy changes list */
+/* Nappy changes and feeds lists */
 .card {
     margin: 1rem;
+}
+
+/* Detail view */
+
+.detail-view-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detail-view-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.nappy-change-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-view-pic {
+    width: 60%;
+    height: auto;
 }
 
 /* Footer */
@@ -100,4 +124,25 @@ footer {
     font-size: 150%;
     margin: 3.5vw;
     /* ADD COLOR FROM ROOT VARIABLES */
+}
+
+/* MEDIA QUERIES */
+
+/* Detail view */
+
+@media screen and (min-width: 62.5em) {
+    nappy-change-img {
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    feed-img {
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    .detail-view-detail {
+        width: 60%;
+        padding: 2rem;
+    }
 }

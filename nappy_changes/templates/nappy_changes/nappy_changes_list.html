@@ -5,24 +5,28 @@
 
 {% block content %}
 <h1 class="text-center p-2 d-block">
-    Recent Nappy Changes
+  Recent Nappy Changes
 </h1>
+<h2 class="text-center p-2 d-block">
+  Select entry for more detail
+</h2>
 <div class="container d-flex flex-row flex-wrap justify-content-center">
-    {% for nappy_change in nappy_changes_list %}
-    <div class="card nappy_changes_list_card" aria-label ="{{nappy_change.nappy_contents}} nappy from {{nappy_change.date_and_time}}" style="width: 18rem;">
+  {% for nappy_change in nappy_changes_list %}
+  <div class="card nappy_changes_list_card"
+    aria-label="{{nappy_change.nappy_contents}} nappy from {{nappy_change.date_and_time}}" style="width: 18rem;">
     <div class="card-body ">
-          <h2 class="card-title">{{nappy_change.nappy_contents|title}} nappy</h2> 
-          <h3>{{nappy_change.date_and_time}}</h3>
-          <p class="card-text">Rash? {{nappy_change.rash}}</p>
-          <p class="card-text">Notes: {{nappy_change.notes}}</p>
-          {% if request.user == nappy_change.user %}
-          <div class="text-center">
-            <a href="{% url 'edit_nappy_change' nappy_change.id %}" class="btn btn-primary w-50 mx-3 mb-3">Edit</a>
-            <a href="{% url 'delete_nappy_change' nappy_change.id %}" class="btn btn-primary w-50">Delete</a>
-          </div>
-          {% endif %}
-        </div>
+      <a href="{% url 'nappy_change_detail' nappy_change.id %}">
+        <h3 class="card-title">{{nappy_change.nappy_contents|title}} nappy</h3>
+      </a>
+      <h4>{{nappy_change.date_and_time}}</h4>
+      {% if request.user == nappy_change.user %}
+      <div class="text-center">
+        <a href="{% url 'edit_nappy_change' nappy_change.id %}" class="btn btn-primary w-50 mx-3 mb-3">Edit</a>
+        <a href="{% url 'delete_nappy_change' nappy_change.id %}" class="btn btn-primary w-50">Delete</a>
       </div>
-    {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
 </div>
 {% endblock %}

@@ -15,17 +15,42 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='NappyChange',
+            name="NappyChange",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('date_and_time', models.DateTimeField()),
-                ('nappy_contents', models.CharField(choices=[('wet', 'Wet'), ('dirty', 'Dirty'), ('nothing', 'Nothing')], max_length=10)),
-                ('rash', models.BooleanField(default=False)),
-                ('notes', models.CharField(max_length=500)),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='baby_carer', to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("date_and_time", models.DateTimeField()),
+                (
+                    "nappy_contents",
+                    models.CharField(
+                        choices=[
+                            ("wet", "Wet"),
+                            ("dirty", "Dirty"),
+                            ("nothing", "Nothing"),
+                        ],
+                        max_length=10,
+                    ),
+                ),
+                ("rash", models.BooleanField(default=False)),
+                ("notes", models.CharField(max_length=500)),
+                (
+                    "user",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="baby_carer",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
             options={
-                'ordering': ['-date_and_time'],
+                "ordering": ["-date_and_time"],
             },
         ),
     ]
