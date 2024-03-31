@@ -1,4 +1,4 @@
-from django.views.generic import CreateView, DetailView, DeleteView, UpdateView, ListView
+from django.views.generic import CreateView, DetailView, DeleteView, UpdateView, ListView, DetailView
 
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
@@ -16,6 +16,14 @@ class FeedsList(LoginRequiredMixin, ListView):
     
     def get_queryset(self):
         return self.request.user.feeds_list.all()
+    
+
+class FeedDetail(LoginRequiredMixin, DetailView):
+    """View a single feed entry"""
+
+    template_name = "feeds/feed_detail.html"
+    model = Feed
+    context_object_name = "feed"
     
 
 class AddFeed(LoginRequiredMixin, CreateView):

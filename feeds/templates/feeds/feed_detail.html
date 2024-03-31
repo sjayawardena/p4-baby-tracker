@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{%load static %}
+
+{% block title %} Feed Details - {{ nappy_change.date_and_time }} {% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="detail-view-info mt-3 p-1">
+        <div class="feed-img">
+            <img src="" alt="" class="detail-view-pic">
+        </div>
+        <div class="detail-view-detail">
+            <h1 class="detail-view-title">{{feed.feed_type|title}} feed</h1>
+            <h2>{{feed.date_and_time}}</h2>
+            {% if feed.feed_type == "formula" %}
+            <p class="detail-view-text-formula">Formula Amount (ml): {{feed.formula_amount_ml}}</p>
+            {% endif %}
+            {% if feed.feed_type == "breast" %}
+            <p class="detail-view-text-breast">Breast Feed Duration (Minutes): {{feed.breast_feed_time_minutes}}</p>
+            {% endif %}
+            <p class="detail-view-text">Notes: {{feed.notes}}</p>
+            {% if request.user == feed.user %}
+            <div class="text-center">
+                <a href="{% url 'edit_feed' feed.id %}" class="btn btn-primary w-50 mx-3 mb-3">Edit</a>
+                <a href="{% url 'delete_feed' feed.id %}" class="btn btn-primary w-50">Delete</a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
