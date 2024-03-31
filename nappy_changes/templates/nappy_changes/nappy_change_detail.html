@@ -14,8 +14,8 @@
                     class="detail-view-pic-nappy">
             </div>
             <h2 class="text-center">{{nappy_change.date_and_time}}</h2>
-            <p class="detail-view-text">Rash? {{nappy_change.rash}}</p>
-            <p class="detail-view-text">Notes: {{nappy_change.notes}}</p>
+            <p class="detail-view-text text-center">Rash? {{nappy_change.rash}}</p>
+            <p class="detail-view-text text-center">Notes: {{nappy_change.notes}}</p>
             {% if request.user == nappy_change.user %}
             <div class="text-center">
                 <a href="{% url 'edit_nappy_change' nappy_change.id %}" class="btn btn-primary w-50 mx-3 mb-3">Edit</a>
