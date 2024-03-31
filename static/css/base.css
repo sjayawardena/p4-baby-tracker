@@ -15,13 +15,10 @@ border: 1px solid #00000030;
 
 /* General */
 
-html, body {
-    height: 100%;
-}
-
 body {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
     /* ++ADD FONT FAMILY++ */ 
 }
 
@@ -86,6 +83,16 @@ a.nav-link {
     margin: 1rem;
 }
 
+.list-view-pic-nappy {
+    width: 15%;
+    margin: 2rem;
+}
+
+.list-view-pic-feed {
+    width: 20%;
+    margin: 2rem;
+}
+
 /* Detail view */
 
 .detail-view-info {
@@ -105,9 +112,25 @@ a.nav-link {
     align-items: center;
 }
 
-.detail-view-pic {
-    width: 60%;
-    height: auto;
+.detail-view-pic-nappy {
+    width: 30%;
+    margin: 2rem;
+}
+
+.feed-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-view-pic-formula-feed {
+    width: 15%;
+    margin: 2rem;
+}
+
+.detail-view-pic-breast-feed {
+    width: 25%;
+    margin: 1rem;
 }
 
 /* Footer */
@@ -124,25 +147,4 @@ footer {
     font-size: 150%;
     margin: 3.5vw;
     /* ADD COLOR FROM ROOT VARIABLES */
-}
-
-/* MEDIA QUERIES */
-
-/* Detail view */
-
-@media screen and (min-width: 62.5em) {
-    nappy-change-img {
-        width: 40%;
-        margin: 0 auto;
-    }
-
-    feed-img {
-        width: 40%;
-        margin: 0 auto;
-    }
-
-    .detail-view-detail {
-        width: 60%;
-        padding: 2rem;
-    }
 }

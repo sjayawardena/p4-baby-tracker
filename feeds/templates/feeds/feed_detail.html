@@ -11,8 +11,18 @@
             <img src="" alt="" class="detail-view-pic">
         </div>
         <div class="detail-view-detail">
-            <h1 class="detail-view-title">{{feed.feed_type|title}} feed</h1>
-            <h2>{{feed.date_and_time}}</h2>
+            <h1 class="detail-view-title text-center">{{feed.feed_type|title}} feed</h1>
+            <div class="feed-img">
+                {% if feed.feed_type == "breast" %}
+                <img src="{% static 'images/breast-feeding.webp' %}" alt="Breast feed clipart"
+                    class="detail-view-pic-breast-feed">
+                {% endif %}
+                {% if feed.feed_type == "formula" %}
+                    <img src="{% static 'images/baby-milk-bottle.webp' %}" alt="Baby milk bottle clipart"
+                    class="detail-view-pic-formula-feed">
+                {% endif %}
+            </div>
+            <h2 class="text-center">{{feed.date_and_time}}</h2>
             {% if feed.feed_type == "formula" %}
             <p class="detail-view-text-formula">Formula Amount (ml): {{feed.formula_amount_ml}}</p>
             {% endif %}

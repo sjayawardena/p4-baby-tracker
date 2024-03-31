@@ -1,11 +1,17 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% block title %} Add Feed {% endblock %}
 
 {%block content %}
 <div class="container">
     <form method="POST" class="p-2 form">
         <h1 class="text-center">Add Feed</h1>
+        <div class="feed-list-img text-center">
+            <img src="{% static 'images/baby-milk-bottle-2.webp' %}" alt="Baby milk bottle clipart"
+                class="list-view-pic-feed">
+        </div>
         {% csrf_token %}
         {{ form|crispy }}
         <div class="text-center">

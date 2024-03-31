@@ -7,12 +7,13 @@
 {% block content %}
 <div class="container">
     <div class="detail-view-info mt-3 p-1">
-        <div class="nappy-change-img">
-            <img src="{% static 'images/nappy-change-img.webp/' %}" alt="Nappy change clipart" class="detail-view-pic">
-        </div>
         <div class="detail-view-detail">
-            <h1 class="detail-view-title">{{nappy_change.nappy_contents|title}} nappy</h1>
-            <h2>{{nappy_change.date_and_time}}</h2>
+            <h1 class="detail-view-title text-center">{{nappy_change.nappy_contents|title}} nappy</h1>
+            <div class="nappy-change-img">
+                <img src="{% static 'images/nappy-change-img.webp/' %}" alt="Nappy change clipart"
+                    class="detail-view-pic-nappy">
+            </div>
+            <h2 class="text-center">{{nappy_change.date_and_time}}</h2>
             <p class="detail-view-text">Rash? {{nappy_change.rash}}</p>
             <p class="detail-view-text">Notes: {{nappy_change.notes}}</p>
             {% if request.user == nappy_change.user %}

@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 
+{% load static %}
 
 {% block title %}Nappy Changes{% endblock %}
 
@@ -7,6 +8,9 @@
 <h1 class="text-center p-2 d-block">
   Recent Nappy Changes
 </h1>
+<div class="nappy-change-list-img text-center">
+  <img src="{% static 'images/nappy-change-img-2.webp/' %}" alt="Nappy change clipart" class="list-view-pic-nappy">
+</div>
 <h2 class="text-center p-2 d-block">
   Select entry for more details, or to edit/delete
 </h2>
