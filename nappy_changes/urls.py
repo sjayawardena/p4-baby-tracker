@@ -1,5 +1,11 @@
 from django.urls import path
-from .views import AddNappyChange, NappyChangesList, DeleteNappyChange, EditNappyChange, NappyChangeDetail
+from .views import (
+    AddNappyChange,
+    NappyChangesList,
+    DeleteNappyChange,
+    EditNappyChange,
+    NappyChangeDetail,
+)
 
 urlpatterns = [
     path("", AddNappyChange.as_view(), name="add_nappy_change"),

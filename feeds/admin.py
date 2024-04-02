@@ -3,11 +3,12 @@ from .models import Feed
 
 # Register your models here.
 
+
 @admin.register(Feed)
 class FeedAdmin(admin.ModelAdmin):
     list_display = (
-    'user',
-    'date_and_time',
-    'feed_type',
+        "user",
+        "date_and_time",
+        "feed_type",
     )
-    list_filter = ('user', 'date_and_time', 'feed_type')
+    list_filter = ("user", "date_and_time", "feed_type")
