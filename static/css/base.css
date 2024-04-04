@@ -78,6 +78,10 @@ a.nav-link {
     display: none;
 }
 
+#div_id_formula_amount_ml, #div_id_breast_feed_time_minutes {
+    display: none;
+}
+
 /* Nappy changes and feeds lists */
 .card {
     margin: 1rem;
