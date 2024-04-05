@@ -1,26 +1,20 @@
-/** Defining global variables to be used in functions */
+/** Defining global variables */
 
-const feedTypeSelector = document.getElementById("id_feed_type") //variable for dropdown menu on feed form to select feed type - breast or formula
+const dropdown = document.querySelector("#id_feed_type"); //variable for dropdown feedtype selector
+const breast = document.querySelector("#div_id_breast_feed_time_minutes"); //variable for breast feed duration input
+const formula = document.querySelector("#div_id_formula_amount_ml"); //variable for formula feed amount input
 
-/** Function to show Formula Amount (ml) input if formula feed type is selected */
-
-function showFormulaAmountInput() {
-    document.getElementById("div_id_formula_amount_ml").style.display="block";
-}
-
-/** Function to show Breast Feed Duration (Minutes) input if breast feed type is selected */
-
-function showBreastFeedDurationInput() {
-    document.getElementById("div_id_breast_feed_time_minutes").style.display="block";
-}
-
-function showFeedAmountInputs() {
-    if (feedTypeSelector.value == "Formula") {
-        showFormulaAmountInput();
-    }
-    else if (feedTypeSelector.value == "Breast") {
-        showBreastFeedDurationInput();
-    }
-}
-
-showFeedAmountInputs();
+dropdown.addEventListener("change", event => {
+  if (event.target.value === 'breast') {
+    breast.style.display = 'block'
+    formula.style.display = 'none'
+  }
+  else if (event.target.value === 'formula') {
+    breast.style.display = 'none'
+    formula.style.display = 'block'
+  }
+  else {
+    breast.style.display = 'none'
+    formula.style.display = 'none'
+  }
+})

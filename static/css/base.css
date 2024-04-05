@@ -1,8 +1,12 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Tilt+Neon&display=swap');
 
 
 /* Root variables - fonts*/ 
 :root { 
-/* ++ADD FONT FAMILIES ROOT VARIABLES PER VIDEOS++ */  
+    --title: 'Tilt Neon', sans-serif;
+    --main-font: 'Hind', sans-serif;
+
 
 /* Root variables - colors 
 ++ADD COLORS ROOT VARIABLES PER VIDEOS++ */
@@ -127,14 +131,15 @@ a.nav-link {
     align-items: center;
 }
 
-.detail-view-pic-formula-feed {
+.bottle-feed-pic {
     width: 15%;
-    margin: 2rem;
+    margin: 1rem;
 }
 
 .detail-view-pic-breast-feed {
     width: 25%;
-    margin: 1rem;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
 }
 
 /* Footer */
