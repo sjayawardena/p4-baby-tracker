@@ -2,19 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Tilt+Neon&display=swap');
 
 
-/* Root variables - fonts*/ 
-:root { 
+/* Root variables - fonts*/
+:root {
     --title: 'Tilt Neon', sans-serif;
     --main-font: 'Hind', sans-serif;
 
 
-/* Root variables - colors 
+    /* Root variables - colors 
 ++ADD COLORS ROOT VARIABLES PER VIDEOS++ */
 
-/* Root variables - utils
+    /* Root variables - utils
 ++ ADD UTILITY ROOT VARIABLES PER VIDEOS++ */
---small-box-shadow: 1px -1px 7px 0 #00000061;
-border: 1px solid #00000030;
+    --small-box-shadow: 1px -1px 7px 0 #00000061;
+    border: 1px solid #00000030;
 }
 
 /* General */
@@ -39,7 +39,12 @@ main {
     letter-spacing: 6px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     /* ++ADD FONT FAMILY++ */
 }
 
@@ -49,6 +54,12 @@ header {
     font-family: var(--title);
     letter-spacing: 1px;
     font-size: 100%;
+}
+
+.navbar-title {
+    font-family: var(--title);
+    letter-spacing: 4px;
+    font-size: 170%;
 }
 
 .nav-item {
@@ -80,7 +91,8 @@ a.nav-link {
 /* ++ADD img.logo STYLING++ */
 
 .active {
-    border-bottom: 2px solid blue; /* ++ADD ROOT VARIABLE COLOR WHEN DECIDED++ */
+    border-bottom: 2px solid blue;
+    /* ++ADD ROOT VARIABLE COLOR WHEN DECIDED++ */
     font-weight: 500;
 }
 
@@ -107,7 +119,8 @@ a.nav-link {
     display: none;
 }
 
-#div_id_formula_amount_ml, #div_id_breast_feed_time_minutes {
+#div_id_formula_amount_ml,
+#div_id_breast_feed_time_minutes {
     display: none;
 }
 

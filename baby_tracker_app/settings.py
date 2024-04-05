@@ -32,6 +32,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     "8000-sjayawarden-p4babytrack-qnjd3hjlur6.ws-eu110.gitpod.io",
+    "8000-sjayawarden-p4babytrack-qnjd3hjlur6.ws-us110.gitpod.io",
     ".herokuapp.com",
 ]
 
@@ -110,7 +111,8 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://8000-sjayawarden-p4babytrack-qnjd3hjlur6.ws-eu110.gitpod.io"
+    "https://8000-sjayawarden-p4babytrack-qnjd3hjlur6.ws-eu110.gitpod.io",
+    "https://8000-sjayawarden-p4babytrack-qnjd3hjlur6.ws-us110.gitpod.io",
 ]
 
 WSGI_APPLICATION = "baby_tracker_app.wsgi.application"
