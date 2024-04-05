@@ -23,29 +23,54 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /* ++ADD FONT FAMILY++ */ 
+    font-family: var(--main-font);
+    letter-spacing: 1px;
 }
 
 main {
     flex: 1 0 auto;
+    padding: 1rem;
     /* ++ADD BACKGROUND-COLOR++ */
 }
 
-
+/* Page titles */
+.page-title {
+    font-family: var(--title);
+    letter-spacing: 6px;
+}
 
 h1, h2, h3, h4, h5, h6 {
     /* ++ADD FONT FAMILY++ */
 }
 
 /* Header/Navbar */
+
+header {
+    font-family: var(--title);
+    letter-spacing: 1px;
+    font-size: 100%;
+}
+
 .nav-item {
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 3px;
+    margin-right: 3px;
+    text-align: center;
 }
 
 .navbar {
     /* ++ADD BACKGROUND COLOR ROOT VARIABLE++ */
     box-shadow: var(--small-box-shadow);
+    padding: 1rem;
+}
+
+.navbar-container {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-shrink: 1;
 }
 
 a.nav-link {
@@ -101,7 +126,7 @@ a.nav-link {
     margin: 2rem;
 }
 
-/* Detail view */
+/* Detail s */
 
 .detail-view-info {
     display: flex;
@@ -137,9 +162,7 @@ a.nav-link {
 }
 
 .detail-view-pic-breast-feed {
-    width: 25%;
-    margin-top: 0.25rem;
-    margin-bottom: 1rem;
+    width: 20%;
 }
 
 /* Footer */

@@ -11,7 +11,7 @@
             <img src="" alt="" class="detail-view-pic">
         </div>
         <div class="detail-view-detail">
-            <h1 class="detail-view-title text-center p-2 d-block">{{feed.feed_type|title}} feed</h1>
+            <h1 class="detail-view-title text-center p-2 d-block page-title">{{feed.feed_type|title}} feed</h1>
             <div class="feed-img">
                 {% if feed.feed_type == "breast" %}
                 <img src="{% static 'images/breast-feeding.webp' %}" alt="Breast feed clipart"

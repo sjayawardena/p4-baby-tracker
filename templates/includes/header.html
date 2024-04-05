@@ -3,7 +3,7 @@
 <header>
   {% with request.resolver_match.url_name as url_name %}
     <nav class="navbar navbar-expand-sm bg-body-tertiary">
-        <div class="container-fluid">
+        <div class="container-fluid navbar-container">
             <!-- Logo ++FILL OUT THIS BIT++ -->
           <a class="navbar-brand" href="#">Navbar</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,13 +19,13 @@
                 <a class="nav-link {% if url_name == 'add_feed' %}active{% endif %}" href="{% url 'add_feed' %}">Add Feed</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {% if url_name == 'feeds_list' %}active{% endif %}" href="{% url 'feeds_list' %}">View/Edit Feeds</a>
+                <a class="nav-link {% if url_name == 'feeds_list' %}active{% endif %}" href="{% url 'feeds_list' %}">View Feeds</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {% if url_name == 'add_nappy_change' %}active{% endif %}" href="{% url 'add_nappy_change' %}">Add Nappy Change</a>
+                <a class="nav-link {% if url_name == 'add_nappy_change' %}active{% endif %}" href="{% url 'add_nappy_change' %}">Add Nappy</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {% if url_name == 'nappy_changes_list' %}active{% endif %}" href="{% url 'nappy_changes_list' %}">View/Edit Nappy Changes</a>
+                <a class="nav-link {% if url_name == 'nappy_changes_list' %}active{% endif %}" href="{% url 'nappy_changes_list' %}">View Nappies</a>
               </li>
               {% if request.user.is_authenticated %}
               <li class="nav-item">

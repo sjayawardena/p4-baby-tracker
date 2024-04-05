@@ -4,6 +4,8 @@ const dropdown = document.querySelector("#id_feed_type"); //variable for dropdow
 const breast = document.querySelector("#div_id_breast_feed_time_minutes"); //variable for breast feed duration input
 const formula = document.querySelector("#div_id_formula_amount_ml"); //variable for formula feed amount input
 
+/** Event listener to change feed amount input based on selection of breast or formula feed */
+
 dropdown.addEventListener("change", event => {
   if (event.target.value === 'breast') {
     breast.style.display = 'block'
