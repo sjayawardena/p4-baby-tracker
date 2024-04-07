@@ -5,8 +5,8 @@
 {% block title %}{% trans "Sign Out" %}{% endblock %}
 
 {% block content %}
-<div class="container text-center">
-  <h1>{% trans "Sign Out" %}</h1>
+<div class="container text-center authentication-pages">
+  <h1 class="page-title">{% trans "Sign Out" %}</h1>
 
   <p>{% trans 'Are you sure you want to sign out?' %}</p>
 
@@ -15,7 +15,7 @@
     {% if redirect_field_value %}
     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
     {% endif %}
-    <button type="submit" class="btn btn-primary w-25">{% trans 'Sign Out' %}</button>
+    <button type="submit" class="btn btn-primary btn-lg w-40 authentication-button">{% trans 'Sign Out' %}</button>
   </form>
 </div>
 

@@ -20,7 +20,7 @@
     aria-label="{{nappy_change.nappy_contents}} nappy from {{nappy_change.date_and_time}}" style="width: 18rem;">
     <div class="card-body ">
       <a href="{% url 'nappy_change_detail' nappy_change.id %}">
-        <h3 class="card-title">{{nappy_change.nappy_contents|title}} nappy</h3>
+        <h3 class="card-title text-success">{{nappy_change.nappy_contents|title}} nappy</h3>
       </a>
       <h4>{{nappy_change.date_and_time}}</h4>
     </div>

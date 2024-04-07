@@ -14,6 +14,7 @@
     /* Root variables - utils
 ++ ADD UTILITY ROOT VARIABLES PER VIDEOS++ */
     --small-box-shadow: 1px -1px 7px 0 #00000061;
+    --small-box-shadow-2: 1px -1px 7px 0 #198754;
     border: 1px solid #00000030;
 }
 
@@ -24,7 +25,9 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-family: var(--main-font);
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
+    font-size: 120%;
+    padding: 0.5rem;
 }
 
 main {
@@ -39,13 +42,16 @@ main {
     letter-spacing: 6px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    /* ++ADD FONT FAMILY++ */
+/* Authentication pages */
+
+.authentication-pages {
+    font-family: var(--main-font);
+    letter-spacing: 2px;
+}
+
+.authentication-button {
+    background-color: #198754;
+    letter-spacing: 2px;
 }
 
 /* Header/Navbar */
@@ -59,7 +65,7 @@ header {
 .navbar-title {
     font-family: var(--title);
     letter-spacing: 4px;
-    font-size: 170%;
+    font-size: 150%;
 }
 
 .nav-item {
@@ -98,8 +104,35 @@ a.nav-link {
 
 /* Home Page */
 
+a {
+    text-decoration: none;
+}
+
 .home-page-text {
     list-style-type: none;
+}
+
+.site-logo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.site-logo {
+    width: 50%;
+    padding: 0.5rem;
+}
+
+.dashboard-options {
+    font-size: 120%;
+    margin: 5px;
+}
+
+.dashboard-options-list {
+    margin-bottom: 5px;
 }
 
 /* Forms (e.g. sign up etc) */
@@ -191,5 +224,25 @@ footer {
 .social-icon {
     font-size: 150%;
     margin: 3.5vw;
-    /* ADD COLOR FROM ROOT VARIABLES */
+    color: black;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 768px) {
+
+    /* Home Page */
+
+    .site-logo {
+        width: 18%;
+        padding: 0.25rem;
+    }
+
+    .bottle-feed-pic {
+        width: 8%;
+    }
+
+    .list-view-pic-nappy {
+        width: 10%;
+    }
 }
