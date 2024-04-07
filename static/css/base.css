@@ -91,14 +91,10 @@ header {
     flex-shrink: 1;
 }
 
-a.nav-link {
-    /* ++ADD ROOT VARIABLE COLOR++ */
-}
-
 /* ++ADD img.logo STYLING++ */
 
 .active {
-    border-bottom: 2px solid blue;
+    border-bottom: 2px solid #198754;
     /* ++ADD ROOT VARIABLE COLOR WHEN DECIDED++ */
     font-weight: 500;
 }
