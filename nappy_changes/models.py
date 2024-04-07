@@ -9,13 +9,13 @@ class NappyChange(models.Model):
     A model to enter and edit nappy changes
     """
 
-    NAPPY_CONTENTS = (("wet", "Wet"), ("dirty", "Dirty"), ("nothing", "Nothing"))
+    NAPPY_CONTENTS = (("wet", "Wet"), ("dirty", "Dirty"), ("wet-and-dirty", "Wet and Dirty"), ("nothing", "Nothing"))
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="nappy_changes_list"
     )
     date_and_time = models.DateTimeField()
     nappy_contents = models.CharField(
-        max_length=10, choices=NAPPY_CONTENTS, null=False, blank=False
+        max_length=20, choices=NAPPY_CONTENTS, null=False, blank=False
     )
     rash = models.BooleanField(default=False)
     notes = models.CharField(max_length=100, blank=True)
