@@ -23,7 +23,7 @@ class NappyChange(models.Model):
         max_length=20, choices=NAPPY_CONTENTS, null=False, blank=False
     )
     rash = models.BooleanField(default=False)
-    notes = models.CharField(max_length=100, blank=True)
+    notes = models.CharField(max_length=200, blank=True)
 
     class Meta:
         ordering = ["-date_and_time"]

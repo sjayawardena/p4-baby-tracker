@@ -122,7 +122,6 @@ header {
 
 /* Forms (e.g. sign up etc) */
 .form {
-    width: 100%;
     margin: 3% auto;
     box-shadow: var(--small-box-shadow);
     border-radius: 5px;
