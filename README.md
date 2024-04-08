@@ -4,7 +4,11 @@
 
 Welcome! Tracker.Baby is a site for parents to enter details and keep track of their babies's feeds and nappy changes.
 
-It is the fourth project for my Diploma in Full Stack Software Development, and utilises the Django framework linked to a PostgreSQL object-relational database, along with the Bootstrap, Python, HTML, JavaScript and CSS languages.
+It is the fourth project for my Diploma in Full Stack Software Development, and utilises the Django framework linked to a PostgreSQL object-relational database, along with the Bootstrap, Python, HTML, JavaScript and CSS.
+
+The site has full CRUD functionality whereby users can create, read, update and delete database entries via the Feed and NappyChange models.
+
+Users are required to create an account and sign in with a username and password, after also entering their email address.
 
 The site is responsive across all screen sizes.
 
@@ -87,19 +91,93 @@ As a registered user/site user, I can view weekly or monthly stats about my baby
 - View weekly or monthly feed stats - how many feeds, how many of a certain type, average amounts
 - Easily access the stats through the Home page viewed upon sign in
 
+## Database Entity Relationship Diagram
+
+This Entity Relationship Diagram (ERD) details the models used for the site. Django's built-in User model was used, along with the custom-created Feed and Nappy Change models.
+
+![ERD screenshot](static/images/readme/p4-models-ERD.png)
+
 ## Design
+
+The site design is simple and minimal, with an emphasis on short and concise bits of information in the form of users' nappy and feed entries.
 
 ### Colour Scheme
 
+Three colours are used on the site to help facilitate this minimalism - the white of the background (#FFFFFF,), the black of the text and any images (#000000), and the green used for buttons on the site, active navbar section underlines and any text with a hyperlink (#198754). Green was also picked as it is gender-neutral, so does not seemed geared towards either boy or girl babies.
+
+![Colours screenshot](static/images/readme/p4-colors.png)
+
 ### Fonts
 
+To further enhance the site's minimal style, two clean-looking sans-serif Google fonts are used - Tilt Neon for page titles, the header logo and navbar text, and Hind for everything else.
+
+![Tilt Neon screenshot](static/images/readme/p4-font-tilt-neon.png) 
+
+![Hind screenshot](static/images/readme/p4-font-hind.png)
+
 ## Wireframes
+
+Wireframes were used in the planning stage of the project to flesh out how the site should look across its different pages for both mobile and desktop.
+
+Shown here are wireframes for the home page/dashboard, the add/edit feed and add/edit nappy change pages, the view feeds and view nappy changes pages, and the detail view for individual feed or nappy change entries.
+
+![Home wireframes screenshot](static/images/readme/p4-wireframes-home.png)
+
+![Add/edit entry wireframes screenshot](static/images/readme/p4-wireframes-add-edit.png)
+
+![View entries wireframes screenshot](static/images/readme/p4-wireframes-view-list.png)
+
+![Detail view wireframes screenshot](static/images/readme/p4-wireframes-detail.png)
 
 ## Features
 
 ### Existing Features
 
-## Deployment
+All features are shown here in mobile view.
+
+#### Header/Navbar
+
+This has the site's text logo, which also works as a link back to the home page/dashboard. Also it has links to all pages of the site, which dropdown in collapsable menu form on mobile. If the user is signed in, they will see "Sign Out" as the last option. If not, they will see "Sign In" and "Register" as the last options.
+
+![Navbar screenshot](static/images/readme/p4-navbar-screenshot.png)
+
+#### Homepage/Dashboard
+
+If the user is logged in, the home page functions as a dashboard where the user can click on four different hyperlinks - Add Feed, View Feeds, Add Nappy, View Nappies - that take them through to different functions and parts of the site.
+
+If the user is not logged in, the home page explains what the site is for, and prompts them to register or sign in.
+
+![Home page signed in screenshot](static/images/readme/p4-home-signedin-screenshot.png)
+
+![Home pagenot signed in screenshot](static/images/readme/p4-home-notsignedin-screenshot.png)
+
+#### Sign In Page
+
+The sign in page allows users to enter their username and password to log in. It is linked to from the home page, the navbar, and also appears if users who are not signed in or registered attempt to access any of the site's features via the navbar.
+
+![Sign in page screenshot](static/images/readme/p4-signin-screenshot.png)
+
+#### Register / Sign Up Page
+
+This can be reached via links on the home page, the navbar if the user is not signed in or registered, and from a link on the Sign In page. Here users enter their email address, and create a username and password in order to register their account.
+
+![Register/Sign Up page screenshot](static/images/readme/p4-signup-screenshot.png)
+
+#### Sign Out Page
+
+The Sign Out page is reached once the user clicks Logout in the navbar. Users are asked to confirm they wish to sign out.
+
+![Sign out screenshot](static/images/readme/p4-signout-screenshot.png)
+
+#### Add Feed Page
+
+Here the user can add a feed entry for their baby. They select the time and date, the type of feed (either formula or breast), the amount of the feed, and can input any optional notes. If the user selects a formula feed, an input box appears called Formula Amount (ml), whereas if they select breast then an input box appears called Breast Feed Duration (Minutes).
+
+![Add feed formula screenshot](static/images/readme/p4-add-feed-formula-screenshot.png)
+
+![Add feed breast screenshot](static/images/readme/p4-add-feed-breast-screenshot.png)
+
+## Development and Deployment
 
 ## Technologies Used
 
