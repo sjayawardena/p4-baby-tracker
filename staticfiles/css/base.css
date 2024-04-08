@@ -1,0 +1,264 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Tilt+Neon&display=swap');
+
+
+/* Root variables - fonts*/
+:root {
+    --title: 'Tilt Neon', sans-serif;
+    --main-font: 'Hind', sans-serif;
+
+    /* Root variables - utils */
+    --small-box-shadow: 1px -1px 7px 0 #00000061;
+    --small-box-shadow-2: 1px -1px 7px 0 #198754;
+    border: 1px solid #00000030;
+}
+
+/* General */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: var(--main-font);
+    letter-spacing: 1.5px;
+    font-size: 120%;
+    padding: 0.5rem;
+}
+
+main {
+    flex: 1 0 auto;
+    padding: 1rem;
+    /* ++ADD BACKGROUND-COLOR++ */
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Page titles */
+.page-title {
+    font-family: var(--title);
+    letter-spacing: 6px;
+}
+
+/* Authentication pages */
+.authentication-pages {
+    font-family: var(--main-font);
+    letter-spacing: 2px;
+}
+
+.authentication-button {
+    background-color: #198754;
+    letter-spacing: 2px;
+    min-width: 40%;
+}
+
+/* Header/Navbar */
+header {
+    font-family: var(--title);
+    letter-spacing: 1px;
+    font-size: 100%;
+}
+
+.navbar-title {
+    font-family: var(--title);
+    letter-spacing: 4px;
+    font-size: 150%;
+}
+
+.nav-item {
+    margin-left: 3px;
+    margin-right: 3px;
+    text-align: center;
+}
+
+.navbar {
+    box-shadow: var(--small-box-shadow);
+    padding: 1rem;
+}
+
+.navbar-container {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-shrink: 1;
+}
+
+.active {
+    border-bottom: 2px solid #198754;
+    font-weight: 500;
+}
+
+/* Home Page */
+.home-page-text {
+    list-style-type: none;
+}
+
+.site-logo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.site-logo {
+    width: 50%;
+    padding: 0.5rem;
+}
+
+.dashboard-options {
+    font-size: 120%;
+    margin: 5px;
+}
+
+.dashboard-options-list {
+    margin-bottom: 5px;
+}
+
+/* Forms (e.g. sign up etc) */
+.form {
+    width: 100%;
+    margin: 3% auto;
+    box-shadow: var(--small-box-shadow);
+    border-radius: 5px;
+}
+
+#id_password_helptext {
+    display: none;
+}
+
+#div_id_remember {
+    display: none;
+}
+
+#div_id_formula_amount_ml,
+#div_id_breast_feed_time_minutes {
+    display: none;
+}
+
+/* Nappy changes and feeds lists */
+.card {
+    margin: 1rem;
+}
+
+.list-view-pic-nappy {
+    width: 15%;
+    margin: 2rem;
+}
+
+.list-view-pic-feed {
+    width: 20%;
+    margin: 2rem;
+}
+
+/* Detail views */
+.detail-view-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detail-view-detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.nappy-change-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-view-pic-nappy {
+    width: 30%;
+    margin: 2rem;
+}
+
+.feed-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottle-feed-pic {
+    width: 15%;
+    margin: 1rem;
+}
+
+.detail-view-pic-breast-feed {
+    width: 15%;
+}
+
+/* Footer */
+footer {
+    flex-shrink: 0;
+    /* ++ADD FONT FAMILY++ */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon {
+    font-size: 150%;
+    margin: 3.5vw;
+    color: black;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 768px) {
+
+    /* Home Page */
+
+    .site-logo {
+        width: 18%;
+        padding: 0.25rem;
+    }
+
+    /* Detail and list views views*/
+    .bottle-feed-pic {
+        width: 8%;
+    }
+
+    .list-view-pic-nappy {
+        width: 10%;
+    }
+
+    .detail-view-pic-nappy {
+        width: 22%;
+    }
+
+    .detail-view-pic-breast-feed {
+        width: 25%;
+    }
+}
+
+@media screen and (min-width: 978px) {
+
+    /* Detail views*/
+    .detail-view-pic-breast-feed {
+        width: 15%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Detail views*/
+    .detail-view-pic-breast-feed {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+
+    /* Detail views*/
+    .detail-view-pic-nappy {
+        width: 50%;
+    }
+}
