@@ -7,12 +7,7 @@
     --title: 'Tilt Neon', sans-serif;
     --main-font: 'Hind', sans-serif;
 
-
-    /* Root variables - colors 
-++ADD COLORS ROOT VARIABLES PER VIDEOS++ */
-
-    /* Root variables - utils
-++ ADD UTILITY ROOT VARIABLES PER VIDEOS++ */
+    /* Root variables - utils */
     --small-box-shadow: 1px -1px 7px 0 #00000061;
     --small-box-shadow-2: 1px -1px 7px 0 #198754;
     border: 1px solid #00000030;
@@ -36,6 +31,10 @@ main {
     /* ++ADD BACKGROUND-COLOR++ */
 }
 
+a {
+    text-decoration: none;
+}
+
 /* Page titles */
 .page-title {
     font-family: var(--title);
@@ -43,7 +42,6 @@ main {
 }
 
 /* Authentication pages */
-
 .authentication-pages {
     font-family: var(--main-font);
     letter-spacing: 2px;
@@ -56,7 +54,6 @@ main {
 }
 
 /* Header/Navbar */
-
 header {
     font-family: var(--title);
     letter-spacing: 1px;
@@ -76,7 +73,6 @@ header {
 }
 
 .navbar {
-    /* ++ADD BACKGROUND COLOR ROOT VARIABLE++ */
     box-shadow: var(--small-box-shadow);
     padding: 1rem;
 }
@@ -91,20 +87,12 @@ header {
     flex-shrink: 1;
 }
 
-/* ++ADD img.logo STYLING++ */
-
 .active {
     border-bottom: 2px solid #198754;
-    /* ++ADD ROOT VARIABLE COLOR WHEN DECIDED++ */
     font-weight: 500;
 }
 
 /* Home Page */
-
-a {
-    text-decoration: none;
-}
-
 .home-page-text {
     list-style-type: none;
 }
@@ -133,7 +121,6 @@ a {
 }
 
 /* Forms (e.g. sign up etc) */
-
 .form {
     width: 100%;
     margin: 3% auto;
@@ -169,8 +156,7 @@ a {
     margin: 2rem;
 }
 
-/* Detail s */
-
+/* Detail views */
 .detail-view-info {
     display: flex;
     flex-direction: column;
@@ -235,6 +221,7 @@ footer {
         padding: 0.25rem;
     }
 
+    /* Detail and list views views*/
     .bottle-feed-pic {
         width: 8%;
     }
@@ -253,19 +240,25 @@ footer {
 }
 
 @media screen and (min-width: 978px) {
+
+    /* Detail views*/
     .detail-view-pic-breast-feed {
         width: 15%;
     }
 }
 
 @media screen and (max-width: 768px) {
+
+    /* Detail views*/
     .detail-view-pic-breast-feed {
         width: 40%;
     }
 }
 
 @media screen and (max-width: 420px) {
-    .detail-view-pic-nappy  {
+
+    /* Detail views*/
+    .detail-view-pic-nappy {
         width: 50%;
     }
 }

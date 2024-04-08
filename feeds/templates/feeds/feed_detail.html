@@ -18,7 +18,7 @@
                     class="detail-view-pic-breast-feed">
                 {% endif %}
                 {% if feed.feed_type == "formula" %}
-                    <img src="{% static 'images/baby-milk-bottle.webp' %}" alt="Baby milk bottle clipart"
+                <img src="{% static 'images/baby-milk-bottle.webp' %}" alt="Baby milk bottle clipart"
                     class="bottle-feed-pic">
                 {% endif %}
             </div>
@@ -27,13 +27,16 @@
             <p class="detail-view-text-formula text-center">Formula Amount (ml): {{feed.formula_amount_ml}}</p>
             {% endif %}
             {% if feed.feed_type == "breast" %}
-            <p class="detail-view-text-breast text-center">Breast Feed Duration (Minutes): {{feed.breast_feed_time_minutes}}</p>
+            <p class="detail-view-text-breast text-center">Breast Feed Duration (Minutes):
+                {{feed.breast_feed_time_minutes}}</p>
             {% endif %}
             <p class="detail-view-text text-center">Notes: {{feed.notes}}</p>
             {% if request.user == feed.user %}
             <div class="text-center">
-                <a href="{% url 'edit_feed' feed.id %}" class="btn btn-primary btn-lg authentication-button w-50 mx-3 mb-3">Edit</a>
-                <a href="{% url 'delete_feed' feed.id %}" class="btn btn-primary btn-lg authentication-button w-50">Delete</a>
+                <a href="{% url 'edit_feed' feed.id %}"
+                    class="btn btn-primary btn-lg authentication-button w-50 mx-3 mb-3">Edit</a>
+                <a href="{% url 'delete_feed' feed.id %}"
+                    class="btn btn-primary btn-lg authentication-button w-50">Delete</a>
             </div>
             {% endif %}
         </div>
