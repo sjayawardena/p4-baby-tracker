@@ -10,5 +10,6 @@ class FeedAdmin(admin.ModelAdmin):
         "user",
         "date_and_time",
         "feed_type",
+        "notes",
     )
-    list_filter = ("user", "date_and_time", "feed_type")
+    list_filter = ("user", "date_and_time", "feed_type", "notes")
