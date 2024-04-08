@@ -1,12 +1,91 @@
 # Tracker.Baby
 
+![amiresponsive screenshot](static/images/readme/p4-responsive-screenshot.png)
+
+Welcome! Tracker.Baby is a site for parents to enter details and keep track of their babies's feeds and nappy changes.
+
+It is the fourth project for my Diploma in Full Stack Software Development, and utilises the Django framework linked to a PostgreSQL object-relational database, along with the Bootstrap, Python, HTML, JavaScript and CSS languages.
+
+The site is responsive across all screen sizes.
+
+This is a link to the deployed site:
+
 ## User Experience (UX)
 
 ### User Demographic
 
-The site is intended for:
+The site is intended for parents of a baby or toddler requiring breast or formula feeds, as well as nappy changes.
 
 ### User Stories
+
+Throughout development, this [kanban board](https://github.com/users/sjayawardena/projects/8/views/1) was used to work through user stories in order of priority. User stories' functionality was labelled as relating to either the site superuser, or to standard users. They were also labelled in terms of priority - must have, should have, could have.
+
+![Screenshot of kanban board](static/images/readme/p4-kanban-wide-screenshot.png)
+
+The user stories were:
+
+#### Superuser / Must Have (All Completed)
+
+As a superuser I can get my superuser account set up so that carry out admin functions
+- Acceptance Criteria (AC) 1: Superuser account set up, the first for account set up for the site
+- AC2: Superuser can successfully log in
+- AC3: Superuser can see admin dashboard
+
+As a superuser I can view all registered users so that I can see their account information and usage.
+- AC1: View list of registered users
+- AC2: See date each user joined and date they last logged in
+- AC3: Change info regarding their account - such as username, email address etc if requested/necessary
+
+As a superuser I can create, view, edit or delete feed and nappy change entries for all users so that I can be in control of baby tracker app's usage
+Acceptance Criteria
+AC1: View list of registered users with ability to create, read, update or delete their feed or nappy change entries
+AC2: See date each user joined and date they last logged in
+AC3: Change info regarding their account - such as username, email address etc if requested/necessary #
+
+#### Superuser / Should Have (Completed)
+
+As a superuser I can search/filter registered users' entries so that I can see how much the app is being used to track certain things - e.g. feeds, nappy changes etc.
+- AC1: Option in admin dashboard to filter list of site users' entries by type - e.g. feeds, nappy changes etc
+- AC2: Option in admin dashboard to search through entries by type - e.g. feeds, nappy changes etc
+- AC3: Option in admin dashboard to see when user's acccount set up
+
+#### User / Must Have (Completed)
+
+As a site user I can register my account so that I can use the Tracker.Baby site
+- AC1: Allauth successfully installed
+- AC2: New user logins can be created via allauth
+- AC3: New user logins work successfully
+
+As a site/registered user I can add, view, edit and delete entries for my baby's nappy changes so that I can keep track of when nappies were changed and the contents of the nappies.
+- Enter a nappy change in the app, along with date and time
+- Specify wet, dirty, both, or neither
+- View all nappy change entries, edit or delete them
+
+As a site/registered user I can add, view, edit and delete entries for my baby's feeds so that I can keep track of when my baby was fed, and what type of feed it was.
+- Enter a feed in the app, along with date and time
+- Specify formula, breast, and the amount of each
+- View all feed entries, edit or delete them
+
+#### Superuser / Could Have (Not Completed)
+
+As a superuser I can view registered users' access to different features based on free or paid membership so that more features can be added for users who pay
+- AC1: Site users listed in admin dashboard as either free or paid users
+- AC2: Option to filter list of site users in admin dashboard by either free or paid
+- AC3: Information visible in admin dashboard about when user signed up to paid, if/when subscription is ending
+
+#### User / Should Have (Not Completed)
+
+As a registered user/site user, I can view weekly or monthly stats about my baby's feeds or nappy changes so that I can identify trends.
+- View weekly or monthly nappy change stats - how many nappy changes, how many of a certain type etc
+- View weekly or monthly feed stats - how many feeds, how many of a certain type, average amounts
+- Easily access the stats through the Home page viewed upon sign in
+
+#### User / Could Have (Not Completed)
+
+As a registered user/site user, I can view weekly or monthly stats about my baby's feeds or nappy changes so that I can identify trends.
+- View weekly or monthly nappy change stats - how many nappy changes, how many of a certain type etc
+- View weekly or monthly feed stats - how many feeds, how many of a certain type, average amounts
+- Easily access the stats through the Home page viewed upon sign in
 
 ## Design
 

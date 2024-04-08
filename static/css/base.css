@@ -28,7 +28,7 @@ body {
 main {
     flex: 1 0 auto;
     padding: 1rem;
-    /* ++ADD BACKGROUND-COLOR++ */
+    align-content: center;
 }
 
 a {
