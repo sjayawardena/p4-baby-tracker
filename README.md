@@ -20,7 +20,7 @@ This is a link to the deployed site:
 
 The site is intended for parents of a baby or toddler requiring breast or formula feeds, as well as nappy changes.
 
-### User Stories
+### User Stories - Implemented
 
 Throughout development, this [kanban board](https://github.com/users/sjayawardena/projects/8/views/1) was used to work through user stories in order of priority. User stories' functionality was labelled as relating to either the site superuser, or to standard users. They were also labelled in terms of priority - must have, should have, could have.
 
@@ -28,7 +28,7 @@ Throughout development, this [kanban board](https://github.com/users/sjayawarden
 
 The user stories were:
 
-#### Superuser / Must Have (All Completed)
+#### Superuser / Must Have (Completed)
 
 As a superuser I can get my superuser account set up so that carry out admin functions
 - Acceptance Criteria (AC) 1: Superuser account set up, the first for account set up for the site
@@ -69,6 +69,8 @@ As a site/registered user I can add, view, edit and delete entries for my baby's
 - Enter a feed in the app, along with date and time
 - Specify formula, breast, and the amount of each
 - View all feed entries, edit or delete them
+
+### User Stories - Not Implemented / For Future Implementations
 
 #### Superuser / Could Have (Not Completed)
 
@@ -473,12 +475,6 @@ There are no unfixed bugs that I am aware of.
 
 ## Credits
 
-### Content
-
-### Code
-
-
-### Media
-
+- [This series of videos on YouTube](https://www.youtube.com/watch?v=sBjbty691eI&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy) from Code Institute mentor Daisy McGirr was followed to build all CRUD elements of the project, set up Bootstrap styling, and in creating the file structure. I relied on these to be able to use Django and, as such, a lot of code across all apps is taken from Daisy's walkthrough, but adapted to my project.  
 
 
