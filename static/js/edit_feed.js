@@ -7,14 +7,12 @@ const formula = document.querySelector("#div_id_formula_amount_ml"); //variable 
 /** Event listener to change feed amount input based on selection of breast or formula feed */
 
 if (dropdown.value === 'breast') {
-    breast.style.display = 'block'
-    formula.style.display = 'none'
-  }
-  else if (dropdown.value === 'formula') {
-    breast.style.display = 'none'
-    formula.style.display = 'block'
-  }
-  else {
-    breast.style.display = 'none'
-    formula.style.display = 'none'
-  }
+  breast.style.display = 'block';
+  formula.style.display = 'none';
+} else if (dropdown.value === 'formula') {
+  breast.style.display = 'none';
+  formula.style.display = 'block';
+} else {
+  breast.style.display = 'none';
+  formula.style.display = 'none';
+}

@@ -29,11 +29,11 @@ class FeedsList(LoginRequiredMixin, ListView):
 
 class FeedDetail(LoginRequiredMixin, DetailView):
     """View a single feed entry"""
-    
+
     template_name = "feeds/feed_detail.html"
     model = Feed
     context_object_name = "feed"
-    
+
 
 class AddFeed(LoginRequiredMixin, CreateView):
     """
@@ -51,7 +51,10 @@ class AddFeed(LoginRequiredMixin, CreateView):
 
 
 class EditFeed(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
-    """Edit a feedentry - with check that logged in user is editing only their own entries"""
+    """
+    Edit a feedentry - with check that logged in user is
+    editing only their own entries
+    """
 
     template_name = "feeds/edit_feed.html"
     model = Feed
@@ -63,7 +66,10 @@ class EditFeed(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 
 class DeleteFeed(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
-    """Delete a nappy change entry - with check that logged in user is deleting only their own entries"""
+    """
+    Delete a nappy change entry -
+    with check that logged in user is deleting only their own entries
+    """
 
     model = Feed
     template_name = "feeds/feed_confirm_delete.html"

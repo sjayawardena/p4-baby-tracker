@@ -5,11 +5,14 @@
 {%block content %}
 <div class="container form-entry-container">
     <form method="POST" class="p-2 form">
+        <!-- Page title -->
         <h1 class="text-center page-title">Edit Nappy Change</h1>
+        <!-- CSRF token and Crispy Forms -->
         {% csrf_token %}
         {{ form|crispy }}
+        <!-- Confirm changes button -->
         <div class="text-center">
-            <button type="submit" class="btn btn-primary btn-lg mt-2 authentication-button">Confirm Changes</button>
+            <button type="submit" class="btn btn-primary btn-lg mt-2 authentication-button" aria-label="Confirm Changes buton">Confirm Changes</button>
         </div>
     </form>
 </div>

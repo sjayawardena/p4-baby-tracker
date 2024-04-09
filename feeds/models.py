@@ -14,7 +14,8 @@ class Feed(models.Model):
         ("breast", "Breast"),
     )
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="feeds_list")
+    user = models.ForeignKey(User, on_delete=models.CASCADE,
+                             related_name="feeds_list")
     date_and_time = models.DateTimeField()
     feed_type = models.CharField(
         max_length=10, choices=FEED_TYPE, null=False, blank=False
@@ -28,5 +29,6 @@ class Feed(models.Model):
 
     def __str__(self):
         return (
-            f"{self.feed_type} feed from {self.date_and_time} | entered by {self.user}"
+            f"{self.feed_type} feed from \
+            {self.date_and_time} | entered by {self.user}"
         )

@@ -8,15 +8,13 @@ const formula = document.querySelector("#div_id_formula_amount_ml"); //variable 
 
 dropdown.addEventListener("change", event => {
   if (event.target.value === 'breast') {
-    breast.style.display = 'block'
-    formula.style.display = 'none'
+    breast.style.display = 'block';
+    formula.style.display = 'none';
+  } else if (event.target.value === 'formula') {
+    breast.style.display = 'none';
+    formula.style.display = 'block';
+  } else {
+    breast.style.display = 'none';
+    formula.style.display = 'none';
   }
-  else if (event.target.value === 'formula') {
-    breast.style.display = 'none'
-    formula.style.display = 'block'
-  }
-  else {
-    breast.style.display = 'none'
-    formula.style.display = 'none'
-  }
-})
+});

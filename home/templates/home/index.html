@@ -6,12 +6,16 @@
 
 {% block content %}
 <div class="container">
+    <!-- If statement to check if user is authenticated and display the appropriate version of the page -->
     {% if request.user.is_authenticated %}
+    <!-- Page title -->
     <h1 class="text-center mt-2 page-title">Dashboard</h1>
+    <!-- Page image -->
     <div class="site-logo-container">
         <img src="{% static 'images/baby-tracker-logo.webp' %}" alt="Baby head with heart symbol clip art"
             class="site-logo">
     </div>
+    <!-- Dashboard options list -->
     <div class="d-flex justify-content-center text-center pt-3 dashboard-options">
         <ul>
             <a href="{% url 'add_feed' %}">
@@ -32,6 +36,7 @@
         </ul>
     </div>
 </div>
+<!-- Non-authenticated version of the Home page  -->
 {% else %}
 <div class="container">
     <h1 class="text-center mt-2 page-title">Welcome</h1>

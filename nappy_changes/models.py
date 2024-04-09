@@ -29,4 +29,5 @@ class NappyChange(models.Model):
         ordering = ["-date_and_time"]
 
     def __str__(self):
-        return f"{self.nappy_contents} nappy from {self.date_and_time} | entered by {self.user}"
+        return f"{self.nappy_contents} nappy from {self.date_and_time} \
+            | entered by {self.user}"

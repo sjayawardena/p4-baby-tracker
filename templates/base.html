@@ -11,7 +11,7 @@
     {% block extra_css %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
         integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <!-- Base CSS -->
     <link rel="stylesheet" href={% static '/css/base.css' %}>
     <!-- Favicon -->
@@ -28,15 +28,19 @@
 </head>
 
 <body>
+    <!-- Templating for header -->
     {% include 'includes/header.html' %}
 
     <main>
+    <!-- Templating for main content -->
         {% block content %}
         {% endblock %}
     </main>
 
+    <!-- Templating for footer -->
     {% include 'includes/footer.html' %}
 
+    <!-- Templating for block extras -->
     {% block extras %}
     
     {% endblock %}

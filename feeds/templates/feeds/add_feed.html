@@ -6,16 +6,20 @@
 
 {%block content %}
 <div class="container form-entry-container">
-    <form method="POST" class="p-2 form">
+    <form method="POST" class="p-2 form" aria-label="Add Feed form">
+        <!-- Page Title -->
         <h1 class="text-center p-2 d-block page-title">Add Feed</h1>
+        <!-- Page Image -->
         <div class="feed-list-img text-center">
             <img src="{% static 'images/baby-milk-bottle.webp' %}" alt="Baby milk bottle clipart"
                 class="bottle-feed-pic">
         </div>
+        <!-- CSRF token and Crispy Forms -->
         {% csrf_token %}
         {{ form|crispy }}
+        <!-- Confirm button -->
         <div class="text-center">
-            <button type="submit" class="btn btn-primary btn-lg mt-2 authentication-button">Enter Feed</button>
+            <button type="submit" class="btn btn-primary btn-lg mt-2 authentication-button" aria-label="Submit">Enter Feed</button>
         </div>
     </form>
 </div>

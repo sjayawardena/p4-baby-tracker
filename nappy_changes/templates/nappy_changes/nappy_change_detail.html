@@ -8,20 +8,27 @@
 <div class="container">
     <div class="detail-view-info mt-3 p-1">
         <div class="detail-view-detail">
+            <!-- Page title - nappy contents and date/time -->
             <h1 class="detail-view-title text-center page-title">{{nappy_change.nappy_contents|title}} nappy</h1>
+            <!-- Page image -->
             <div class="nappy-change-img">
                 <img src="{% static 'images/nappy-change-img.webp' %}" alt="Nappy change clipart"
                     class="detail-view-pic-nappy">
             </div>
+            <!-- All details of nappy change -->
             <h2 class="text-center">{{nappy_change.date_and_time}}</h2>
             <p class="detail-view-text text-center">Rash? {{nappy_change.rash}}</p>
             <p class="detail-view-text text-center">Notes: {{nappy_change.notes}}</p>
+            <!-- If statement to check if nappy change entry belongs to logged in user, and if so to show Edit and Delete buttons -->
             {% if request.user == nappy_change.user %}
             <div class="text-center">
+                <!-- Edit button -->
                 <a href="{% url 'edit_nappy_change' nappy_change.id %}"
-                    class="btn btn-primary btn-lg authentication-button w-50 mx-3 mb-3">Edit</a>
+                    class="btn btn-primary btn-lg authentication-button w-50 mx-3 mb-3"
+                    aria-label="Edit button">Edit</a>
+                <!-- Delete button -->
                 <a href="{% url 'delete_nappy_change' nappy_change.id %}"
-                    class="btn btn-primary btn-lg authentication-button w-50">Delete</a>
+                    class="btn btn-primary btn-lg authentication-button w-50" aria-label="Delete button">Delete</a>
             </div>
             {% endif %}
         </div>

@@ -3,6 +3,7 @@
 {% block title %}Delete Nappy Change Entry {{object.nappy_contents}} nappy from {{object.date_and_time}}{% endblock %}
 
 {% block content %}
+<!-- Confirm delete confirmation title and message -->
 <div class="container">
     <h1 class="text-center mt-2 page-title">Confirm Deletion</h1>
     <div class="d-flex justify-content-center pt-3">
@@ -10,6 +11,7 @@
             {% csrf_token %}
             <p>Are you sure you want to delete {{object.nappy_contents|title}} Nappy Entry from
                 {{object.date_and_time}}?</p>
+            <!-- Confirm delete button -->
             <input type="submit" value="Confirm" class="btn btn-primary w-25 authentication-button">
         </form>
     </div>

@@ -50,7 +50,10 @@ class AddNappyChange(LoginRequiredMixin, CreateView):
 
 
 class EditNappyChange(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
-    """Edit a nappy change entry - with check that logged in user is editing only their own entries"""
+    """
+    Edit a nappy change entry -
+    with check that logged in user is editing only their own entries
+    """
 
     template_name = "nappy_changes/edit_nappy_change.html"
     model = NappyChange
@@ -62,7 +65,10 @@ class EditNappyChange(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 
 class DeleteNappyChange(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
-    """Delete a nappy change entry - with check that logged in user is deleting only their own entries"""
+    """
+    Delete a nappy change entry -
+    with check that logged in user is deleting only their own entries
+    """
 
     model = NappyChange
     template_name = "nappy_changes/nappy_change_confirm_delete.html"

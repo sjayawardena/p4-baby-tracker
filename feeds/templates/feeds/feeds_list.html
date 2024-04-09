@@ -5,9 +5,11 @@
 {% block title %}Feeds{% endblock %}
 
 {% block content %}
+<!-- Page title -->
 <h1 class="text-center p-2 d-block page-title">
   Recent Feeds
 </h1>
+<!-- Page image -->
 <div class="feed-list-img text-center">
   <img src="{% static 'images/baby-milk-bottle.webp' %}" alt="Baby milk bottle clipart" class="bottle-feed-pic">
 </div>
@@ -15,7 +17,9 @@
   Select entry for more details, or to edit/delete
 </h2>
 <div class="container d-flex flex-row flex-wrap justify-content-center">
+  <!-- For loop to iterate over user's feed entries and display them in a list-->
   {% for feed in feeds_list %}
+  <!-- Bootstrap card class to display individual feeds -->
   <div class="card feeds_list_card" aria-label="{{feed.feed_type}} feed from {{feed.date_and_time}}"
     style="width: 18rem;">
     <div class="card-body ">

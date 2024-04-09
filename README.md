@@ -305,36 +305,167 @@ On each browser, in all display sizes/modes, all of the following have been test
 ## Problems Encountered
 
 Problems encountered during development and in the testing phases - both at the end of the process and at various stages during the process - include:
+- At first when trying to link to a PostgreSQL database, I had put the full link to the database in settings.py, rather than just the DATABASE_URL variable (with the full link in the hidden env.py file, and in Heroku's config vars). This was a security risk, and also it just did not work, and CRUD functions would not work.
+- The first deployment to Heroku did not work, and an H14 error code message was showing. This was solved after contacting Code Institute's Tutor Support, who advised me to log into Heroku via Gitpod's CLI, and run the command "heroku ps:scale web=1".
+- When coding the DeleteNappyChange view, the success_url was not working and was defaulting to a lower-case version of the model name. So, on advice from Tutor Support, I imported the reverse_lazy package and used that in the view to redirect to the desired page - "feeds_list". This was also the case for the EditNappyChange view, and was solved in the same way.
+- When trying to code for the conditional inputs on the Add Feed form (Formula Amount ml for formula, Breast Feed Duration Minutes for breast), the JavaScript file (add_feed.js) that I had linked to as a {% block extra %} at the bottom of add_feed.html was not having an effect. This was solved by adding a blank {% block extra %} tag to the bottom of the site base.html file.
+- On the Heroku deployment, all images on the site were working apart from those in the nappies pages - Add Nappy and View Nappies. This turned out to be because the img elements'  src attribute links had a trailing slash on the end of them. Removing these and redeploying solved the problem.
 
-### Validator Testing
+## Validator Testing
 
-The site's script.js JavaScript files passed through [JS Hint](https://jshint.com/) validator service successfully. 
+### HTML
 
-The site's base.css file has passed through the [W3C validation](https://validator.w3.org/) process.
+The html files for the site across all apps have sucessfully passed through the [W3 validation](https://validator.w3.org/) process.
 
-The html for the site has also passed through the [W3 validation](https://validator.w3.org/) process.
+The boilerplate text, html and head elements from the top of base.html in the 'templates' folder of the root directory passed through with no issues.
+
+![base.html validated screenshot](static/images/readme/p4-base.html-validated-screenshot.png)
+
+Then, the contents of all of these html files passed through the validator with no issues (the issues flaged warning that there was no boilerplate html at the top - DOCTYPE, head element, html element, title element etc - were ignored due the the templated nature of the files, and on the basis that the boilerplate text, html and head elements of base.html passed through with no issues):
+
+- footer.html (root directory, in 'templates/includes' folder)
+- header.html (broot directory, in 'templates/includes' folder)
+- 403.html (root directory, in 'templates' folder)
+- add_feed.html (feeds app)
+- edit_feed.html (feeds app)
+- feed_confirm_delete.html (feeds app)
+- feed_detail.html (feeds app) (the issue flagged about the empty src and alt attributes for the first image element were ignored because the html validator cannot take account of the templated if statements)
+- feeds_list.html (feeds app) (the issue about a possible misuse of aria-labels for each card was ignored, because I preferred to include them. The aria labels use templating to state the title of each feed entry card - i.e. the feed type and the date)
+- index.html (home app, authenticated and non-authenticated version) (the issue about an a element not being allowed as a child of a ul element was ignored as I needed to have links in this list)
+- add_nappy_change.html (nappy_changes app)
+- edit_nappy_change.html (nappy_changes app)
+- nappy_change_confirm_delete.html (nappy_changes app)
+- nappy_change_detail.html (nappy_changes_app)
+- nappy_changes_list.html (nappy_changes app) (the issue about a possible misuse of aria-labels for each card was ignored, because I preferred to include them. The aria labels use templating to state the title of each feed entry card - i.e. the feed type and the date)
+
+### Python
+
+The site's Python files across all apps have successfully passed through [Code Institute's PEP8 validator tool](https://pep8ci.herokuapp.com/).
+
+These files are:
+
+- settings.py (baby_tracker_app app)(the issues regarding 4 lines being too long relate to Django-supplied code, so were ignored)
+
+![settings.py validated screenshot](static/images/readme/p4-settings-py-validated.png)
+
+- urls.py (baby_tracker_app app)
+- admin.py (feeds app)
+- forms.py (feeds app)
+- models.py (feeds app)
+- urls.py (feeds app)
+- views.py (feeds app)
+- urls.py (home app)
+- views.py (home app)
+- admin.py (nappy_changes app)
+- forms.py (nappy_changes app)
+- models.py (nappy_changes app)
+- urls.py (nappy_changes app)
+- views.py (nappy_changes app)
+- manage.py (root directory)
+
+### JavaScript
+
+The site's minimal JavaScript files passed through [JS Hint](https://jshint.com/) validator service successfully. These files are: 
+
+- add_feed.js in the 'static/js' file in the root diretory
+
+![add_feed.js validated screenshot](static/images/readme/add-feed-js-validated-screenshot.png)
+
+- edit_feed.js in the 'static/js' file in the root diretory
+
+### CSS
+
+The contents of the site's base.css file in the 'static/css' folder of the root directory has passed through the [W3C validation](https://validator.w3.org/) process.
+
+![CSS validates screenshot](static/images/readme/p4-css-validated-screenshot.png)
 
 All screens on the site have all scored adequately on the report generated by Lighthouse.
 
+### Site Performance - Lighthouse
+
+All pages on the site have passed through and scored adequately on the Lighthouse performance validator.
+
+These pages are:
+
+- Home page
+
+![Home Page Lighthouse validated](static/images/readme/p4-lighthouse-validated.png) 
+
+- Add Feed page
+- View Feeds page
+- Edit Feeds page
+- Delete Feeds page
+- Feed Detail page
+- Add Nappy Change page
+- View Nappies page
+- Edit Nappy Change page
+- Delete Nappy Change page
+- Nappy Change Detail page
+- Sign In, Register and Sign Out pages
+
 ## Development and Deployment
+
+The site was set up by creating a new repository on GitHub, using a template from CodeInstitute.
+
+The development environment used was GitPod. This was opened initially via the 'GitPod' button that appeared on the repo's listing on GitHub.
+
+The initial 'git add', 'git commit' and 'git push' were made on 24 March 2024. There have been over 60 further commits since then.
+
+The regular commits and pushes were sent from GitPod back to the repo on GitHub.
+
+The Django framework was firstly installed to the Gitpod IDE.
+
+During the course of development, these other ackages, frameworks and libraries were also installed to the IDE:
+- Black
+- django-crispy-forms
+- Crispy Bootstrap5
+- psycopg2
+- django-allauth
+- gunicorn
+- dj_database_url
+- whitenoise
+
+Bootstrap was added to the IDE via CDN.
+
+Code Institute's PostgreSQL database tool was linked to via a database url in the env.py file (which itself was added to gitignore).
+
+To deploy the site to Heroku, the following steps from Code Institute course content were followed (but with project/app names adapted as needed):
+
+![Heroku deploy 1 screenshot](static/images/readme/p4-heroku-deploy-1.png)
+![Heroku deploy 2 screenshot](static/images/readme/p4-heroku-deploy-2.png)
+
+The site was then redeployed at different stages of development.
 
 ## Technologies Used
 
-- HTML5 - 
-- CSS - to style each page
-- JavaScript - 
+- [Django](https://www.djangoproject.com/) - framework used to build the site
+- [Bootstrap](https://getbootstrap.com/) - framework used to style the site, including mobile-first layout responsiveness.
+- HTML5 - to code for all page templates.
+- CSS - to add styling on top of Bootstrap.
+- Python - used to code across all Django apps and files.
+- JavaScript - used very minimally to dynamically alter the Add Feed and Edit Feed forms.
 - [GitHub](https://github.com/) - to create and store the repository for the website.
 - [GitPod](https://www.gitpod.io/) - the Integrated Development Environment (IDE) used to build the site, and to 'git commit' and 'git push' back to the GitHub repository.
+- [Heroku](https://www.heroku.com) - platform used to deploy the site
+- [Black Python code formatter](https://black.readthedocs.io/en/stable/) - installed into the IDE to format Python code.
+- [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/) - installed into the IDE to add ready-made styling and structure to forms.
+- [psycopg2](https://pypi.org/project/psycopg2/) - postgreSQL database adapter for Python.
+- [django-allauth](https://docs.allauth.org/en/latest/) - packaged installed to allow user accounts to be set up and authenticated.
+- [dj_database_url](https://pypi.org/project/dj-database-url/) - Django utility to utilise DATABASE_URL variable
+- [WhiteNoise](https://whitenoise.readthedocs.io/en/stable/django.html) - Django utility to aid with the use of static files.
 - [Balsamiq](https://balsamiq.com/wireframes/) - Application used on Mac to create wireframes.
 - [Google Fonts](https://fonts.google.com/) - both fonts used in this project were chosen via Google Fonts
-- [icons8 website](https://icons8.com/) - 
-- [Pixabay website](https://pixabay.com/) - 
+- [Fontawesome](https://fontawesome.com/) - social media link icons came from here.
+- [Pixabay website](https://pixabay.com/) - nappy change and feed clipart images came from here.
+- [SVG Repo website](https://www.svgrepo.com/) - the main clipart image of the baby's head on the Home page came from here.
 - [Chrome DevTools](https://developer.chrome.com/docs/devtools/) - used to inspect the website and its performance at every step of development.
 - [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) - used to assess the overall quality of the site.
 - [W3C Markup Validation site](https://validator.w3.org/) - used to find issues in the html for the site and to resolve them 
 - [W3C CSS Validation site](https://jigsaw.w3.org/css-validator/) - used to find issues in the CSS for the site and to resolve them.
 - [JS Hint validation site](https://jshint.com/) - used to find issues in the JavaScript for the site and to resolve them.
+- [Code Institute's Python Linter](https://pep8ci.herokuapp.com/) - used to validate the project's Python code (the PEP8 Online validator website is no longer operational).
 - [Am I Responsive? site](https://ui.dev/amiresponsive) - used to generate screenshots of the site across different devices and screen sizes.
+
 
 ### Unfixed Bugs
 

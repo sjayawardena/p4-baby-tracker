@@ -5,21 +5,25 @@
 {% block title %}Nappy Changes{% endblock %}
 
 {% block content %}
+<!-- Page title-->
 <h1 class="text-center p-2 d-block page-title">
   Recent Nappy Changes
 </h1>
+<!-- Page image -->
 <div class="nappy-change-list-img text-center">
   <img src="{% static 'images/nappy-change-img-2.webp' %}" alt="Nappy change clipart" class="list-view-pic-nappy">
 </div>
 <h2 class="text-center p-2 d-block">
   Select entry for more details, or to edit/delete
 </h2>
+<!-- For loop to iterate over user's nappy change entries and display them as Bootstrap cards -->
 <div class="container d-flex flex-row flex-wrap justify-content-center">
   {% for nappy_change in nappy_changes_list %}
   <div class="card nappy_changes_list_card"
     aria-label="{{nappy_change.nappy_contents}} nappy from {{nappy_change.date_and_time}}" style="width: 18rem;">
     <div class="card-body ">
       <a href="{% url 'nappy_change_detail' nappy_change.id %}">
+        <!-- Card title - nappy change contents and date/time -->
         <h3 class="card-title text-success">{{nappy_change.nappy_contents|title}} nappy</h3>
       </a>
       <h4>{{nappy_change.date_and_time}}</h4>
