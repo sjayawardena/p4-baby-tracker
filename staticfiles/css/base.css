@@ -28,7 +28,6 @@ body {
 main {
     flex: 1 0 auto;
     padding: 1rem;
-    /* ++ADD BACKGROUND-COLOR++ */
 }
 
 a {
@@ -120,11 +119,19 @@ header {
     margin-bottom: 5px;
 }
 
+.dashboard-options ul {
+    padding: 0;
+}
+
 /* Forms (e.g. sign up etc) */
 .form {
     margin: 3% auto;
     box-shadow: var(--small-box-shadow);
     border-radius: 5px;
+}
+
+.form-entry-container {
+    max-width: 700px;
 }
 
 #id_password_helptext {

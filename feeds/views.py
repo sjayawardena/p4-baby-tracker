@@ -29,11 +29,11 @@ class FeedsList(LoginRequiredMixin, ListView):
 
 class FeedDetail(LoginRequiredMixin, DetailView):
     """View a single feed entry"""
-
+    
     template_name = "feeds/feed_detail.html"
     model = Feed
     context_object_name = "feed"
-
+    
 
 class AddFeed(LoginRequiredMixin, CreateView):
     """
