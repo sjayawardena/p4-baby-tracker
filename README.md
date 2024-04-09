@@ -30,68 +30,72 @@ The user stories were:
 
 #### Superuser / Must Have (Completed)
 
-As a superuser I can get my superuser account set up so that carry out admin functions
+**As a superuser I can get my superuser account set up so that carry out admin functions**
 - Acceptance Criteria (AC) 1: Superuser account set up, the first for account set up for the site
 - AC2: Superuser can successfully log in
 - AC3: Superuser can see admin dashboard
 
-As a superuser I can view all registered users so that I can see their account information and usage.
+
+**As a superuser I can view all registered users so that I can see their account information and usage.**
 - AC1: View list of registered users
 - AC2: See date each user joined and date they last logged in
 - AC3: Change info regarding their account - such as username, email address etc if requested/necessary
 
-As a superuser I can create, view, edit or delete feed and nappy change entries for all users so that I can be in control of baby tracker app's usage
+
+**As a superuser I can create, view, edit or delete feed and nappy change entries for all users so that I can be in control of baby tracker app's usage**
 Acceptance Criteria
-AC1: View list of registered users with ability to create, read, update or delete their feed or nappy change entries
-AC2: See date each user joined and date they last logged in
-AC3: Change info regarding their account - such as username, email address etc if requested/necessary #
+- AC1: View list of registered users with ability to create, read, update or delete their feed or nappy change entries
+- AC2: See date each user joined and date they last logged in
+- AC3: Change info regarding their account - such as username, email address etc if requested/necessary #
 
 #### Superuser / Should Have (Completed)
 
-As a superuser I can search/filter registered users' entries so that I can see how much the app is being used to track certain things - e.g. feeds, nappy changes etc.
+**As a superuser I can search/filter registered users' entries so that I can see how much the app is being used to track certain things - e.g. feeds, nappy changes etc.**
 - AC1: Option in admin dashboard to filter list of site users' entries by type - e.g. feeds, nappy changes etc
 - AC2: Option in admin dashboard to search through entries by type - e.g. feeds, nappy changes etc
-- AC3: Option in admin dashboard to see when user's acccount set up
+- AC3: Option in admin dashboard to see when user's account set up
 
 #### User / Must Have (Completed)
 
-As a site user I can register my account so that I can use the Tracker.Baby site
+**As a site user I can register my account so that I can use the Tracker.Baby site**
 - AC1: Allauth successfully installed
 - AC2: New user logins can be created via allauth
 - AC3: New user logins work successfully
 
-As a site/registered user I can add, view, edit and delete entries for my baby's nappy changes so that I can keep track of when nappies were changed and the contents of the nappies.
-- Enter a nappy change in the app, along with date and time
-- Specify wet, dirty, both, or neither
-- View all nappy change entries, edit or delete them
 
-As a site/registered user I can add, view, edit and delete entries for my baby's feeds so that I can keep track of when my baby was fed, and what type of feed it was.
-- Enter a feed in the app, along with date and time
-- Specify formula, breast, and the amount of each
-- View all feed entries, edit or delete them
+**As a site/registered user I can add, view, edit and delete entries for my baby's nappy changes so that I can keep track of when nappies were changed and the contents of the nappies.**
+- AC1: Enter a nappy change in the app, along with date and time
+- AC2: Specify wet, dirty, both, or neither
+- AC3: View all nappy change entries, edit or delete them
+
+
+**As a site/registered user I can add, view, edit and delete entries for my baby's feeds so that I can keep track of when my baby was fed, and what type of feed it was.**
+- AC1: Enter a feed in the app, along with date and time
+- AC2: Specify formula, breast, and the amount of each
+- AC3: View all feed entries, edit or delete them
 
 ### User Stories - Not Implemented / For Future Implementations
 
 #### Superuser / Could Have (Not Completed)
 
-As a superuser I can view registered users' access to different features based on free or paid membership so that more features can be added for users who pay
+**As a superuser I can view registered users' access to different features based on free or paid membership so that more features can be added for users who pay**
 - AC1: Site users listed in admin dashboard as either free or paid users
 - AC2: Option to filter list of site users in admin dashboard by either free or paid
 - AC3: Information visible in admin dashboard about when user signed up to paid, if/when subscription is ending
 
 #### User / Should Have (Not Completed)
 
-As a registered user/site user, I can view weekly or monthly stats about my baby's feeds or nappy changes so that I can identify trends.
-- View weekly or monthly nappy change stats - how many nappy changes, how many of a certain type etc
-- View weekly or monthly feed stats - how many feeds, how many of a certain type, average amounts
-- Easily access the stats through the Home page viewed upon sign in
+**As a registered user/site user, I can view weekly or monthly stats about my baby's feeds or nappy changes so that I can identify trends.**
+- AC1: View weekly or monthly nappy change stats - how many nappy changes, how many of a certain type etc
+- AC2: View weekly or monthly feed stats - how many feeds, how many of a certain type, average amounts
+- AC3: Easily access the stats through the Home page viewed upon sign in
 
 #### User / Could Have (Not Completed)
 
-As a registered user/site user, I can view weekly or monthly stats about my baby's feeds or nappy changes so that I can identify trends.
-- View weekly or monthly nappy change stats - how many nappy changes, how many of a certain type etc
-- View weekly or monthly feed stats - how many feeds, how many of a certain type, average amounts
-- Easily access the stats through the Home page viewed upon sign in
+**As a registered user/site user, I can view weekly or monthly stats about my baby's feeds or nappy changes so that I can identify trends.**
+- AC1: View weekly or monthly nappy change stats - how many nappy changes, how many of a certain type etc
+- AC2: View weekly or monthly feed stats - how many feeds, how many of a certain type, average amounts
+- AC3: Easily access the stats through the Home page viewed upon sign in
 
 ## Database Entity Relationship Diagram
 
@@ -105,7 +109,7 @@ The site design is simple and minimal, with an emphasis on short and concise bit
 
 ### Colour Scheme
 
-Three colours are used on the site to help facilitate this minimalism - the white of the background (#FFFFFF,), the black of the text and any images (#000000), and the green used for buttons on the site, active navbar section underlines and any text with a hyperlink (#198754). Green was also picked as it is gender-neutral, so does not seemed geared towards either boy or girl babies.
+Three colours are used on the site to help facilitate this minimalism - the white of the background (#FFFFFF,), the black of the text and any images (#000000), and the green used for buttons on the site, active navbar section underlines and any text with a hyperlink (#198754). Green was also picked as it is gender-neutral, so does not seem geared towards either boy or girl babies.
 
 ![Colours screenshot](static/images/readme/p4-colors.png)
 
@@ -151,7 +155,7 @@ If the user is not logged in, the Home page explains what the site is for, and p
 
 ![Home page signed in screenshot](static/images/readme/p4-home-signedin-screenshot.png)
 
-![Home pagenot signed in screenshot](static/images/readme/p4-home-notsignedin-screenshot.png)
+![Home page not signed in screenshot](static/images/readme/p4-home-notsignedin-screenshot.png)
 
 A clipart picture of a baby's head with a heart next to it is used in both cases.
 
@@ -209,11 +213,11 @@ A clipart picture of a baby in a nappy is used at the top.
 
 The View Nappies page shows the user all their previous feeds as Bootstrap cards with the feed type and date/time on them. A prompt at the top makes clear the nappy changes can be clicked on and expanded into detail view from where they can be edited or deleted. 
 
-The feeds grid is responsive from a single vertical column on mobile, to three columns on a desktop screen.
+The nappies grid is responsive from a single vertical column on mobile, to three columns on a desktop screen.
 
 It is ordered by time and date with the most recent nappy change first.
 
-A clipart picture of a baby bottle is used to represent feeding in general.
+A clipart picture of a baby in a nappy is used.
 
 ![Nappies list screenshot](static/images/readme/p4-view-nappies-screenshot.png)
 
@@ -221,7 +225,7 @@ A clipart picture of a baby bottle is used to represent feeding in general.
 
 Clicking on a feed entry from the View Feeds page brings that feed up in the detail view. Here information from all fields are shown - feed type, date and time, a Formula Amount (ml) field or a Breast Feed Duration (Minutes) field as applicable, and notes. 
 
-A clipart picture is shown at the top based on whether the feed is formula or breast. If it's formula, the same image of a baby milk bottle from previous screens is shown. If breast a clipart image of a women breastfeeding is shown.
+A clipart picture is shown at the top based on whether the feed is formula or breast. If it's formula, the same image of a baby milk bottle from previous screens is shown. If breast a clipart image of a woman breastfeeding is shown.
 
 There are green buttons at the bottom that the user can hit to either Edit or Delete the feed.
 
@@ -231,7 +235,7 @@ There are green buttons at the bottom that the user can hit to either Edit or De
 
 #### Edit Feed Page
 
-If a user selects to edit a feed from the feed detail view, then all applicable fields are presented again as editable - feed type, date and time, a Formula Amount (ml) field or a Breast Feed Duration (Minutes) field as applicable, and notes. Once they are happy with their edits, or lack of edits, the can hit the green Confirm Changes button and they will be taken back to the View Feeds page.
+If a user selects to edit a feed from the feed detail view, then all applicable fields are presented again as editable - feed type, date and time, a Formula Amount (ml) field or a Breast Feed Duration (Minutes) field as applicable, and notes. Once they are happy with their edits, or lack of edits, they can hit the green Confirm Changes button and they will be taken back to the View Feeds page.
 
 ![Edit feed screenshot](static/images/readme/p4-edit-feed-screenshot.png)
 
@@ -253,13 +257,13 @@ There are green buttons at the bottom that the user can hit to either Edit or De
 
 #### Edit Nappy Change Page
 
-If a user selects to edit a nappy change from the nappy change detail view, then all applicable fields are presented again as editable - nappy contents, date and time, a checkable rash box, and notes. Once they are happy with their edits, or lack of edits, the can hit the green Confirm Changes button and they will be taken back to the View Nappies page.
+If a user selects to edit a nappy change from the nappy change detail view, then all applicable fields are presented again as editable - nappy contents, date and time, a checkable rash box, and notes. Once they are happy with their edits, or lack of edits, they can hit the green Confirm Changes button and they will be taken back to the View Nappies page.
 
 ![Edit nappy change screenshot](static/images/readme/p4-edit-nappies-screenshot.png)
 
 #### Confirm Delete Nappy Change Page
 
-If a user selects to delete a nappy change from the feed detail view, they get this screen asking them if they are sure. Hitting the green button confirms the deletion, or the Tracker.Baby logo or anything in the navbar can be clicked to take them away from this screen and cancel the deletion.
+If a user selects to delete a nappy change from the nappy change detail view, they get this screen asking them if they are sure. Hitting the green button confirms the deletion, or the Tracker.Baby logo or anything in the navbar can be clicked to take them away from this screen and cancel the deletion.
 
 ![Confirm nappy change deletion screenshot](static/images/readme/p4-confirm-nappy-deletion-screenshot.png)
 
@@ -288,19 +292,19 @@ The website was tested on the Chrome, Safari and Firefox browsers. On each brows
 On each browser, in all display sizes/modes, all of the following have been tested and confirmed as working:
 - All links in the header navbar work as expected, including the text logo, taking the user through to the expected page. If the user is not signed in or registered, they are prompted to sign in or register if they try to click on anything other than Home. In this case, there are also Login and Register options on the navbar. If the user is signed in, then these are replaced with a Logout option on the navbar.
 - The Home page displays a sentence explaining what the site is if the user is signed out, along with links to the Register or Login/Sign In pages. If the user is signed in, it displays a Dashboard, with links through to all areas of the site - Add Feed, View Feeds, Add Nappy Change, View Nappy changes. All these links have been tested and work as expected.
-- The Login/Sign In page functions as expected. Users can enter their email address and username, along with their password, and they are successfully signed in.
-- The Register/Sign Up page allows users to enter their email address, a username, select a password (twice), and then hit the Sign Up button, and their accounts are successflly created. The user is then taken through to their home dashboard, indicating they are now an authenticated user.
+- The Login/Sign In page functions as expected. Users can enter their email address or username, along with their password, and they are successfully signed in.
+- The Register/Sign Up page allows users to enter their email address, a username, select a password (twice), and then hit the Sign Up button, and their accounts are successfully created. The user is then taken through to their home dashboard, indicating they are now an authenticated user.
 - The Sign Out page appears after users hit Logout in the navbar, and asks users to confirm they want to sign out. Once confirmed via hitting the green button, users are taken back to the non-signed in version of the Home page.
 - All parts of the Add Feed page work as expected. The date and time can be selected via the dropdown menu, feed type can be selected via the dropdown menu, a Formula Amount (ml) input with a default of 0 appears if the user selects the "formula" feed type, a Breast Feed Duration (Minutes) input with a default of 0 appears if the user selects the "breast" feed type, and the Notes field takes input on an optional basis. Clicking the green Enter Feed button confirms the entry and takes the user to the View Feeds page, complete with the new entry in the list.
 - The View Feeds page displays as expected. Feed entries are displayed in date order with the newest first. The feeds are shown as Bootstrap cards, with the feed type field and the date and time field. The feed type displayed for each entry is a clickable link that opens that feed's detail view.
 - All parts of the Add Nappy Change page work as expected. The date and time can be selected via the dropdown menu; nappy contents can be selected via the dropdown menu with the options Wet, Dirty, Wet+Dirty or Nothing all available; and the Notes field takes input on an optional basis. Clicking the green Enter Nappy Change button confirms the entry and takes the user to the View Nappies page, complete with the new entry in the list.
 - The View Nappies page displays as expected. Nappy entries are displayed in date order with the newest first. The nappy entries are shown as Bootstrap cards, with the nappy contents field and the date and time field. The nappy contents displayed for each entry is a clickable link that opens that nappy's detail view.
 - The feed detail view displays as expected. The image and page title shown is based on whether the feed is formula or breast, as is the feed amount field (Formula Amount ml or Breast Feed Duration Minutes). The date/time and notes fields display correctly. The Edit and Delete buttons click through to the relevant screens.
-- The nappy change detail view displays as expected. The image works, and the page title shown is based on whether the nappy contents is Wet, Dirty, Wet+Dirty, or Nothing. The date/, rash and notes fields display correctly. The Edit and Delete buttons click through to the relevant screens.
+- The nappy change detail view displays as expected. The image works, and the page title shown is based on whether the nappy contents is Wet, Dirty, Wet+Dirty, or Nothing. The date/time, rash and notes fields display correctly. The Edit and Delete buttons click through to the relevant screens.
 - The Edit Nappy Change page displays all fields as fully re-editable, and clicking the green Confirm Changes button updates the entry and brings the user back to the View Nappies page.
-- The Delete Nappy Change page asks the user if they are sure they wish to delete the entry, and if they click the green Confirm button, the entry deletes and the user is taken back the View Nappies page, which no longer displays the deleted entry.
+- The Delete Nappy Change page asks the user if they are sure they wish to delete the entry, and if they click the green Confirm button, the entry deletes and the user is taken back to the View Nappies page, which no longer displays the deleted entry.
 - The Edit Feed page displays all fields as fully re-editable, and clicking the green Confirm Changes button updates the entry and brings the user back to the View Feeds page.
-- The Delete Feed page asks the user if they are sure they wish to delete the entry, and if they click the green Confirm button, the entry deletes and the user is taken back the View Feed page, which no longer displays the deleted entry. 
+- The Delete Feed page asks the user if they are sure they wish to delete the entry, and if they click the green Confirm button, the entry deletes and the user is taken back to the View Feed page, which no longer displays the deleted entry. 
 - The 403 Unauthorized Access page is shown if the user tries to access another user's entry for editing or deleting purposes, most likely by swapping in a different primary key number in the web address. Clicking on the green Home button at the bottom takes the user back to their home dashboard view.  
 - All the social media icon links in the page footer take the user, in a new tab, through to their respective platforms.
 
@@ -317,13 +321,13 @@ Problems encountered during development and in the testing phases - both at the 
 
 ### HTML
 
-The html files for the site across all apps have sucessfully passed through the [W3 validation](https://validator.w3.org/) process.
+The html files for the site across all apps have successfully passed through the [W3 validation](https://validator.w3.org/) process.
 
 The boilerplate text, html and head elements from the top of base.html in the 'templates' folder of the root directory passed through with no issues.
 
 ![base.html validated screenshot](static/images/readme/p4-base.html-validated-screenshot.png)
 
-Then, the contents of all of these html files passed through the validator with no issues (the issues flaged warning that there was no boilerplate html at the top - DOCTYPE, head element, html element, title element etc - were ignored due the the templated nature of the files, and on the basis that the boilerplate text, html and head elements of base.html passed through with no issues):
+Then, the contents of all of these html files passed through the validator with no issues (the issues flagged warning that there was no boilerplate html at the top - DOCTYPE, head element, html element, title element etc - were ignored due the the templated nature of the files, and on the basis that the boilerplate text, html and head elements of base.html passed through with no issues):
 
 - footer.html (root directory, in 'templates/includes' folder)
 - header.html (broot directory, in 'templates/includes' folder)
@@ -369,15 +373,15 @@ These files are:
 
 The site's minimal JavaScript files passed through [JS Hint](https://jshint.com/) validator service successfully. These files are: 
 
-- add_feed.js in the 'static/js' file in the root diretory
+- add_feed.js in the 'static/js' file in the root directory
 
 ![add_feed.js validated screenshot](static/images/readme/add-feed-js-validated-screenshot.png)
 
-- edit_feed.js in the 'static/js' file in the root diretory
+- edit_feed.js in the 'static/js' file in the root directory
 
 ### CSS
 
-The contents of the site's base.css file in the 'static/css' folder of the root directory has passed through the [W3C validation](https://validator.w3.org/) process.
+The contents of the site's base.css file in the 'static/css' folder of the root directory have passed through the [W3C validation](https://validator.w3.org/) process.
 
 ![CSS validates screenshot](static/images/readme/p4-css-validated-screenshot.png)
 
@@ -409,15 +413,15 @@ These pages are:
 
 The site was set up by creating a new repository on GitHub, using a template from CodeInstitute.
 
-The development environment used was GitPod. This was opened initially via the 'GitPod' button that appeared on the repo's listing on GitHub.
+The development environment used was Gitpod. This was opened initially via the 'Gitpod' button that appeared on the repo's listing on GitHub.
 
 The initial 'git add', 'git commit' and 'git push' were made on 24 March 2024. There have been over 60 further commits since then.
 
-The regular commits and pushes were sent from GitPod back to the repo on GitHub.
+The regular commits and pushes were sent from Gitpod back to the repo on GitHub.
 
 The Django framework was firstly installed to the Gitpod IDE.
 
-During the course of development, these other ackages, frameworks and libraries were also installed to the IDE:
+During the course of development, these other packages, frameworks and libraries were also installed to the IDE:
 - Black
 - django-crispy-forms
 - Crispy Bootstrap5
@@ -446,6 +450,7 @@ The site was then redeployed at different stages of development.
 - CSS - to add styling on top of Bootstrap.
 - Python - used to code across all Django apps and files.
 - JavaScript - used very minimally to dynamically alter the Add Feed and Edit Feed forms.
+- [PostgreSQL database via Code Institute tool](https://dbs.ci-dbs.net/)
 - [GitHub](https://github.com/) - to create and store the repository for the website.
 - [GitPod](https://www.gitpod.io/) - the Integrated Development Environment (IDE) used to build the site, and to 'git commit' and 'git push' back to the GitHub repository.
 - [Heroku](https://www.heroku.com) - platform used to deploy the site
@@ -476,5 +481,6 @@ There are no unfixed bugs that I am aware of.
 ## Credits
 
 - [This series of videos on YouTube](https://www.youtube.com/watch?v=sBjbty691eI&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy) from Code Institute mentor Daisy McGirr was followed to build all CRUD elements of the project, set up Bootstrap styling, and in creating the file structure. I relied on these to be able to use Django and, as such, a lot of code across all apps is taken from Daisy's walkthrough, but adapted to my project.  
+- [This article on Stack Overflow](https://stackoverflow.com/questions/3367091/whats-the-cleanest-simplest-to-get-running-datepicker-in-django) was consulted to help with the code for the date and time picker in the Add Feed and Add Nappy Change pages.
 
 
