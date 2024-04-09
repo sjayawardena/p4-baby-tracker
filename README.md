@@ -143,17 +143,19 @@ This has the site's text logo, which also works as a link back to the home page/
 
 #### Homepage/Dashboard
 
-If the user is logged in, the home page functions as a dashboard where the user can click on four different hyperlinks - Add Feed, View Feeds, Add Nappy, View Nappies - that take them through to different functions and parts of the site.
+If the user is logged in, the Home page functions as a dashboard where the user can click on four different hyperlinks - Add Feed, View Feeds, Add Nappy, View Nappies - that take them through to different functions and parts of the site.
 
-If the user is not logged in, the home page explains what the site is for, and prompts them to register or sign in.
+If the user is not logged in, the Home page explains what the site is for, and prompts them to register or sign in.
 
 ![Home page signed in screenshot](static/images/readme/p4-home-signedin-screenshot.png)
 
 ![Home pagenot signed in screenshot](static/images/readme/p4-home-notsignedin-screenshot.png)
 
+A clipart picture of a baby's head with a heart next to it is used in both cases.
+
 #### Sign In Page
 
-The sign in page allows users to enter their username and password to log in. It is linked to from the home page, the navbar, and also appears if users who are not signed in or registered attempt to access any of the site's features via the navbar.
+The Sign In page allows users to enter their username and password to log in. It is linked to from the home page, the navbar, and also appears if users who are not signed in or registered attempt to access any of the site's features via the navbar.
 
 ![Sign in page screenshot](static/images/readme/p4-signin-screenshot.png)
 
@@ -171,32 +173,98 @@ The Sign Out page is reached once the user clicks Logout in the navbar. Users ar
 
 #### Add Feed Page
 
-Here the user can add a feed entry for their baby. They select the time and date, the type of feed (either formula or breast), the amount of the feed, and can input any optional notes. If the user selects a formula feed, an input box appears called Formula Amount (ml), whereas if they select breast then an input box appears called Breast Feed Duration (Minutes).
+Here the user can add a feed entry for their baby. They select the time and date, the type of feed (either formula or breast), the amount of the feed, and can input any optional notes. If the user selects a formula feed, an input box appears called Formula Amount (ml), whereas if they select breast then an input box appears called Breast Feed Duration (Minutes). 
+
+Once the green Enter Feed button is hit, the user is redirected to the View Feeds page, with their latest entry at the top.
+
+A clipart picture of a baby bottle is used to represent feeding in general.
 
 ![Add feed formula screenshot](static/images/readme/p4-add-feed-formula-screenshot.png)
 
 ![Add feed breast screenshot](static/images/readme/p4-add-feed-breast-screenshot.png)
 
-## Development and Deployment
+#### View Feeds Page
 
-## Technologies Used
+The View Feeds page shows the user all their previous feeds as cards with the feed type and date/time on them. A prompt at the top makes clear the feeds can be clicked on and expanded into detail view from where they can be edited or deleted. 
 
-- HTML5 - to code for each page.
-- CSS - to style each page.
-- JavaScript - to program all elements of how the quiz functions and moves through screens.
-- [GitHub](https://github.com/) - to create and store the repository for the website.
-- [GitPod](https://www.gitpod.io/) - the Integrated Development Environment (IDE) used to build the site, and to 'git commit' and 'git push' back to the GitHub repository.
-- [Balsamiq](https://balsamiq.com/wireframes/) - Application used on Mac to create wireframes.
-- [Google Fonts](https://fonts.google.com/) - both fonts used in this project were chosen via Google Fonts and linked to at the top of the 'style.css' file.
-- [icons8 website](https://icons8.com/) - the favicons were downloaded from here.
-- [Color Space website](https://mycolor.space) - used to select colour scheme.
-- [Pixabay website](https://pixabay.com/) - royalty-free flag images vector art images were downloaded from here for use during the quiz, as well as the start and end screen globe-of-flags hero image.
-- [Chrome DevTools](https://developer.chrome.com/docs/devtools/) - used to inspect the website and its performance at every step of development.
-- [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) - used to assess the overall quality of the site.
-- [W3C Markup Validation site](https://validator.w3.org/) - used to find issues in the html for the site and to resolve them 
-- [W3C CSS Validation site](https://jigsaw.w3.org/css-validator/) - used to find issues in the CSS for the site and to resolve them.
-- [JS Hint validation site](https://jshint.com/) - used to find issues in the JavaScript for the site and to resolve them.
-- [Am I Responsive? site](https://ui.dev/amiresponsive) - used to generate screenshots of the site across different devices and screen sizes.
+The grid is responsive from a single vertical column on mobile, to three columns on a desktop screen. It is ordered by time and date with the most recent feed first.
+
+A clipart picture of a baby bottle is used to represent feeding in general.
+
+![Feeds list screenshot](static/images/readme/p4-view-feeds-screenshot.png)
+
+#### Add Nappy Change Page
+
+Here the user can add a nappy change entry for their baby. They select the time and date, the contents of the nappy (wet, dirty, wet+dirty or nothing), tick the rash box if applicable, and can input any optional notes.
+
+Once the green Enter Nappy Change button is hit, the user is redirected to the View Feeds page, with their latest entry at the top.
+
+A clipart picture of a baby in a nappy is used at the top.
+
+![Add nappy screenshot](static/images/readme/p4-add-nappy-screenshot.png)
+
+#### View Nappies Page
+
+The View Nappies page shows the user all their previous feeds as cards with the feed type and date/time on them. A prompt at the top makes clear the nappy changes can be clicked on and expanded into detail view from where they can be edited or deleted. 
+
+The feeds grid is responsive from a single vertical column on mobile, to three columns on a desktop screen.
+
+It is ordered by time and date with the most recent nappy change first.
+
+A clipart picture of a baby bottle is used to represent feeding in general.
+
+![Nappies list screenshot](static/images/readme/p4-view-nappies-screenshot.png)
+
+#### Feed Detail Page
+
+Clicking on a feed entry from the View Feeds page brings that feed up in the detail view. Here information from all fields are shown - feed type, date and time, a Formula Amount (ml) field or a Breast Feed Duration (Minutes) field as applicable, and notes. 
+
+A clipart picture is shown at the top based on whether the feed is formula or breast. If it's formula, the same image of a baby milk bottle from previous screens is shown. If breast a clipart image of a women breastfeeding is shown.
+
+There are green buttons at the bottom that the user can hit to either Edit or Delete the feed.
+
+![Feed detail formula screenshot](static/images/readme/p4-feed-detail-formula-screenshot.png)
+
+![Feed detail breast screenshot](static/images/readme/p4-feed-detail-breast-screenshot.png)
+
+#### Edit Feed Page
+
+If a user selects to edit a feed from the feed detail view, then all applicable fields are presented again as editable - feed type, date and time, a Formula Amount (ml) field or a Breast Feed Duration (Minutes) field as applicable, and notes. Once they are happy with their edits, or lack of edits, the can hit the green Confirm Changes button and they will be taken back to the View Feeds page.
+
+![Edit feed screenshot](static/images/readme/p4-edit-feed-screenshot.png)
+
+#### Confirm Delete Feed Page
+
+If a user selects to delete a feed from the feed detail view, they get this screen asking them if they are sure. Hitting the green button confirms the deletion, or the Tracker.Baby logo or anything in the navbar can be clicked to take them away from this screen and cancel the deletion.
+
+![Confirm feed deletion screenshot](static/images/readme/p4-deletion-confirmation-screenshot.png)
+
+#### Nappy Change Detail Page
+
+Clicking on a nappy change entry from the View Nappies page brings that nappy change up in the detail view. Here information from all fields are shown - nappy contents, date and time, a checkable rash box, and notes. 
+
+A clipart picture is shown at the top to illustrate somebody changing a baby's nappy. 
+
+There are green buttons at the bottom that the user can hit to either Edit or Delete the nappy change.
+
+![Nappy change detail screenshot](static/images/readme/p4-nappies-detail-screenshot.png)
+
+#### Edit Nappy Change Page
+
+If a user selects to edit a nappy change from the nappy change detail view, then all applicable fields are presented again as editable - nappy contents, date and time, a checkable rash box, and notes. Once they are happy with their edits, or lack of edits, the can hit the green Confirm Changes button and they will be taken back to the View Nappies page.
+
+![Edit nappy change screenshot](static/images/readme/p4-edit-nappies-screenshot.png)
+
+#### Confirm Delete Nappy Change Page
+
+If a user selects to delete a nappy change from the feed detail view, they get this screen asking them if they are sure. Hitting the green button confirms the deletion, or the Tracker.Baby logo or anything in the navbar can be clicked to take them away from this screen and cancel the deletion.
+
+![Confirm nappy change deletion screenshot](static/images/readme/p4-confirm-nappy-deletion-screenshot.png)
+
+#### 403 Unauthorized Access Page
+
+
+**THIS IS WHERE I AM UP TO -- IGNORE BELOW**
 
 ## Testing
 
@@ -204,7 +272,9 @@ The website was tested on the Chrome, Safari and Firefox browsers. On each brows
 
 On each browser, in all display sizes/modes, all of the following have been tested and confirmed as working:
 
-Problems encountered in testing phases - both at the end of the process and at various stages during the process - include:
+## Problems Encountered
+
+Problems encountered during development and in the testing phases - both at the end of the process and at various stages during the process - include:
 
 ### Validator Testing
 
@@ -214,7 +284,27 @@ The site's base.css file has passed through the [W3C validation](https://validat
 
 The html for the site has also passed through the [W3 validation](https://validator.w3.org/) process.
 
-All screens - intro, game and end - on the site have all scored adequately on the report generated by Lighthouse.
+All screens on the site have all scored adequately on the report generated by Lighthouse.
+
+## Development and Deployment
+
+## Technologies Used
+
+- HTML5 - 
+- CSS - to style each page
+- JavaScript - 
+- [GitHub](https://github.com/) - to create and store the repository for the website.
+- [GitPod](https://www.gitpod.io/) - the Integrated Development Environment (IDE) used to build the site, and to 'git commit' and 'git push' back to the GitHub repository.
+- [Balsamiq](https://balsamiq.com/wireframes/) - Application used on Mac to create wireframes.
+- [Google Fonts](https://fonts.google.com/) - both fonts used in this project were chosen via Google Fonts
+- [icons8 website](https://icons8.com/) - 
+- [Pixabay website](https://pixabay.com/) - 
+- [Chrome DevTools](https://developer.chrome.com/docs/devtools/) - used to inspect the website and its performance at every step of development.
+- [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) - used to assess the overall quality of the site.
+- [W3C Markup Validation site](https://validator.w3.org/) - used to find issues in the html for the site and to resolve them 
+- [W3C CSS Validation site](https://jigsaw.w3.org/css-validator/) - used to find issues in the CSS for the site and to resolve them.
+- [JS Hint validation site](https://jshint.com/) - used to find issues in the JavaScript for the site and to resolve them.
+- [Am I Responsive? site](https://ui.dev/amiresponsive) - used to generate screenshots of the site across different devices and screen sizes.
 
 ### Unfixed Bugs
 
